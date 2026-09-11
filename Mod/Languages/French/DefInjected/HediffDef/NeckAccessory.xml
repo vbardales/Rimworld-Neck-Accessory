@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Stage keys use the handle built from the def's English stage label
+       (punctuation dropped, spaces to underscores, duplicates suffixed -0/-1),
+       the same scheme Core uses. -->
+
+  <HDA_Hediff_Hero_inspirationt.label>inspiration du héros</HDA_Hediff_Hero_inspirationt.label>
+  <HDA_Hediff_Hero_inspirationt.description>Quelqu'un porte l'écharpe du héros non loin d'ici, et l'idée de perdre ne vient pas.</HDA_Hediff_Hero_inspirationt.description>
+  <HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>Tant qu'il est là, je ne me vois pas perdre !</HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>
+
+  <InvitationForForbiddance.label>invitation interdite</InvitationForForbiddance.label>
+  <InvitationForForbiddance.description>Une aisance croissante face à l'attention de son propre sexe.</InvitationForForbiddance.description>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>Le regard de son propre sexe est agréable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>Le regard de son propre sexe est agréable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>Le regard de son propre sexe est agréable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>
+
+  <StiffShoulder.label>épaules raides</StiffShoulder.label>
+  <StiffShoulder.labelNoun>des épaules raides</StiffShoulder.labelNoun>
+  <StiffShoulder.description>Des épaules usées par trop de poids porté trop longtemps sur le cou.</StiffShoulder.description>
+  <StiffShoulder.stages.none.label>aucune</StiffShoulder.stages.none.label>
+  <StiffShoulder.stages.minor.label>légères</StiffShoulder.stages.minor.label>
+  <StiffShoulder.stages.major.label>moyennes</StiffShoulder.stages.major.label>
+  <StiffShoulder.stages.extreme.label>extrêmes</StiffShoulder.stages.extreme.label>
+
+</LanguageData>

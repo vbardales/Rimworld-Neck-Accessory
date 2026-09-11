@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ===================== Base ===================== -->
+	<ThingDef ParentName="BuildingBase"  Abstract="True" Name="HDA_SunLight_Base">
+		<label>SunLight</label>
+		<description>a day light.</description>
+		<graphicData>
+			<texPath>Things/Building/Empty</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>false</selectable>
+		<building>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<deconstructible>false</deconstructible>
+		</building>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+
+
+	<!-- ===================== Quality ===================== -->
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Awful</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>0</glowRadius>
+        <glowColor>(196,67,3,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Poor</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(196,67,3,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Normal</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(196,67,3,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Good</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(210,90,20,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Excellent</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>7</glowRadius>
+        <glowColor>(226,97,33,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Masterwork</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(255,127,63,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="HDA_SunLight_Base">
+    <defName>HDA_SunLight_Legendary</defName>
+    <label>SunLight</label>
+    <description>a day light.</description>
+	<thingClass>NeckAccessory.Building_SunLight</thingClass>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

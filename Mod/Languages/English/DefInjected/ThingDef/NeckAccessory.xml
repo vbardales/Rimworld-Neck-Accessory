@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- The defs carry the original mod's English, written by a Japanese speaker.
+       These injections keep the same wording and the same level of disclosure,
+       and only fix the grammar. -->
+
+  <HDA_NeckPlate.label>neck plate armor</HDA_NeckPlate.label>
+  <HDA_NeckPlate.description>Overlapping solid plates of armor covering the neck.</HDA_NeckPlate.description>
+
+  <HDA_HeavyNeckArmor.label>heavy neck armor</HDA_HeavyNeckArmor.label>
+  <HDA_HeavyNeckArmor.description>Armor that firmly protects the neck.
+It is very heavy, so wearing it without a break leaves the shoulders stiff.</HDA_HeavyNeckArmor.description>
+
+  <HDA_Heros_scarf.label>hero's scarf</HDA_Heros_scarf.label>
+  <HDA_Heros_scarf.description>The scarf a hero wears.
+The sight of one standing at the front encourages those who see it.</HDA_Heros_scarf.description>
+
+  <HDA_Masochists_Choker.label>masochist's choker</HDA_Masochists_Choker.label>
+  <HDA_Masochists_Choker.description>A sturdy collar, also used as a restraint.
+Wearing it feels terribly humiliating.</HDA_Masochists_Choker.description>
+
+  <HDA_RoseNecklace.label>rose necklace</HDA_RoseNecklace.label>
+  <HDA_RoseNecklace.description>A necklace shaped like a rose.
+When a man wears it, he comes to be liked by his own sex.</HDA_RoseNecklace.description>
+
+  <HDA_LilyNecklace.label>lily necklace</HDA_LilyNecklace.label>
+  <HDA_LilyNecklace.description>A necklace shaped like a lily.
+When a woman wears it, she comes to be liked by her own sex.</HDA_LilyNecklace.description>
+
+  <HDA_SwindlerNecklace.label>swindler's necklace</HDA_SwindlerNecklace.label>
+  <HDA_SwindlerNecklace.description>A con artist's necklace.
+The wearer feels healthy, and recovers from a bad back and stiff shoulders.</HDA_SwindlerNecklace.description>
+
+  <HDA_SunNecklace.label>sun necklace</HDA_SunNecklace.label>
+  <HDA_SunNecklace.description>A necklace shaped like a sun. When worn, it lights the surroundings brightly.</HDA_SunNecklace.description>
+
+</LanguageData>

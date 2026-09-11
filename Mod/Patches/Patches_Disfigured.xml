@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- The original mod redefined the vanilla "Disfigured" def outright, to graft the
+       hero's scarf bonus onto it, and overwrote whatever the game or another mod had
+       put there along the way. This replaces the worker and adds the positive stage,
+       and touches nothing else. -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="Disfigured"]/workerClass</xpath>
+    <value>
+      <workerClass>NeckAccessory.ThoughtWorker_Disfigured_ProofOfHero</workerClass>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThoughtDef[defName="Disfigured"]/stages</xpath>
+    <value>
+      <li>
+        <label>proof of hero</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

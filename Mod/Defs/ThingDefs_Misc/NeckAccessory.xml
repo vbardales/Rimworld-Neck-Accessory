@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ===================== 首プレート ===================== -->
+  <ThingDef ParentName="ArmorSmithableBase">
+    <defName>HDA_NeckPlate</defName>
+    <label>neck plate armor</label>
+    <description>Overlapping solid plates of armor covering the neck.</description>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/NeckPlate</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <MaxHitPoints>290</MaxHitPoints>
+      <Mass>5</Mass>
+      <StuffEffectMultiplierArmor>0.73</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>7</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <layers>
+        <li>NeckAccessory</li>
+      </layers>
+      <tags>
+        <li>MedievalMilitary</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+
+
+
+	<!-- ===================== HDA_DressingBase ===================== -->
+	<ThingDef Abstract="True" Name="HDA_DressBase">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<costList>
+			<Cloth>30</Cloth>
+		</costList>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>1500</WorkToMake>
+			<Mass>2.0</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+			<SellPriceFactor>0.50</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<generateCommonality>0.001</generateCommonality>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ===================== 重装首鎧 ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_HeavyNeckArmor</defName>
+		<label>Heavy Neck Armor</label>
+		<description>It is an armor that firmly protects the neck.
+Because it is very heavy, it will become stiff shoulder when continuing to equip.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.ErosionExtension">
+				<erodeHediff>StiffShoulder</erodeHediff>
+				<bodyParts>
+					<li>Shoulder</li>
+				</bodyParts>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/NeckArmor</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<MaxHitPoints>340</MaxHitPoints>
+			<Mass>15</Mass>
+		    <Flammability>0.4</Flammability>
+		    <ArmorRating_Sharp>1.58</ArmorRating_Sharp>
+		    <ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+		    <ArmorRating_Heat>1.04</ArmorRating_Heat>
+		    <Insulation_Cold>10</Insulation_Cold>
+		    <Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>7</EquipDelay>
+			<Beauty>0</Beauty>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<costStuffCount>100</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>IndustrialAdvanced</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+
+	<!-- ===================== 英雄のマフラー ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_Heros_scarf</defName>
+		<label>Hero's scarf</label>
+		<description>It is a muffler that hero wears.
+A hero standing in the front encourages those who see it.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.HediffAuraExtension">
+				<enableOnlyPlayerFaction>true</enableOnlyPlayerFaction>
+				<addHediffSeverity>0.5</addHediffSeverity>
+				<maxHediffSeverity>1.0</maxHediffSeverity>
+				<auraDistance>15.0</auraDistance>
+				<intervalTicks>1000</intervalTicks>
+				<hediffToAdd>HDA_Hediff_Hero_inspirationt</hediffToAdd>
+				<targetsEnemies>false</targetsEnemies>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/HeroScarf</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>0.2</Mass>
+      		<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+			<Beauty>4</Beauty>
+			<Comfort>1</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costList>
+			<Gold>30</Gold>
+		</costList>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+
+	<!-- ===================== マゾヒストの首輪 ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_Masochists_Choker</defName>
+		<label>Masochist's Choker</label>
+		<description>It is also a rugged collar used as a restraint.
+I feel terrible humiliation when equipped.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Choker</texPath>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+      		<StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+			<Beauty>0</Beauty>
+			<Comfort>-0.2</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<Steel>30</Steel>
+		</costList>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+
+	<!-- ===================== 薔薇のネックレス ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_RoseNecklace</defName>
+		<label>Rose Necklace</label>
+		<description>It is a necklace shaped like a rose.
+When men wear it will be liked by same sex.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.AffinityExtension">
+				<affinityHediff>InvitationForForbiddance</affinityHediff>
+				<forGender>Male</forGender>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/RoseNecklace</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+      		<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+			<Beauty>6</Beauty>
+			<Comfort>0.2</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+	<!-- ===================== 百合のネックレス ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_LilyNecklace</defName>
+		<label>Lily Necklace</label>
+		<description>It is a necklace shaped like a lily.
+When women wear it will be liked by same sex.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.AffinityExtension">
+				<affinityHediff>InvitationForForbiddance</affinityHediff>
+				<forGender>Female</forGender>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/LilyNecklace</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+      		<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+			<Beauty>6</Beauty>
+			<Comfort>0.2</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+	<!-- ===================== 詐欺師のネックレス ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_SwindlerNecklace</defName>
+		<label>Swindler Necklace</label>
+		<description>It is a necklace of a con artist.
+The wearer will feel healthy and will recover from bad back and stiff shoulder.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.RecoveryExtension">
+				<recoverHediffs>
+					<li>BadBack</li>
+					<li>Frail</li>
+					<li>Cataract</li>
+				</recoverHediffs>
+				<extraHediff>StiffShoulder</extraHediff>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/HartNecklace</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+      		<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+			<Beauty>6</Beauty>
+			<Comfort>0.2</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+	<!-- ===================== 太陽のネックレス ===================== -->
+	<ThingDef ParentName="HDA_DressBase">
+		<defName>HDA_SunNecklace</defName>
+		<label>Sun Necklace</label>
+		<description>It is a necklace shaped like a sun. When equipped it will illuminate the surroundings brightly.</description>
+		<modExtensions>
+			<li Class="NeckAccessory.SunlightExtension" />
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/SunNecklace</texPath>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+      		<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+      		<StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+      		<StuffEffectMultiplierInsulation_Heat>0.02</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.0</EquipDelay>
+			<Beauty>6</Beauty>
+			<Comfort>0.2</Comfort>
+		</statBases>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<apparel>
+			<layers>
+				<li>NeckAccessory</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Neck</li>
+			</bodyPartGroups>
+			<tags>
+				<li>Neolithic</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	    <thingCategories>
+			<li>Apparel</li>
+	    </thingCategories>
+	</ThingDef>
+
+</Defs>

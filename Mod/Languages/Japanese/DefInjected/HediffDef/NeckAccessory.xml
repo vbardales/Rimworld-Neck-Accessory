@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<HDA_Hediff_Hero_inspirationt.label>英雄の鼓舞</HDA_Hediff_Hero_inspirationt.label>
+	<HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>彼がいる限り負ける気がしない！</HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>
+
+	<InvitationForForbiddance.label>禁断の誘い</InvitationForForbiddance.label>
+	<InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>同性からの視線を心地よく感じる。</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>
+	<InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>同性からの視線を心地よく感じる。</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>
+	<InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>同性からの視線を心地よく感じる。</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>
+
+	<StiffShoulder.label>肩こり</StiffShoulder.label>
+	<StiffShoulder.stages.none.label>なし</StiffShoulder.stages.none.label>
+	<StiffShoulder.stages.minor.label>軽度</StiffShoulder.stages.minor.label>
+	<StiffShoulder.stages.major.label>中度</StiffShoulder.stages.major.label>
+	<StiffShoulder.stages.extreme.label>末期的</StiffShoulder.stages.extreme.label>
+</LanguageData>

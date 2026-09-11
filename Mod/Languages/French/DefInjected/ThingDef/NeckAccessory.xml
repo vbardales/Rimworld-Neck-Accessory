@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Faithful to the original text: nothing is added to or removed from the
+       effects it announces, even where a piece hides some (the hero's scarf does
+       not say two wearers come to hate each other, and the rose and lily
+       necklaces do not say they end up granting a trait). -->
+
+  <HDA_NeckPlate.label>plaque de cou</HDA_NeckPlate.label>
+  <HDA_NeckPlate.description>Des plaques d'armure pleines et jointives qui couvrent le cou.</HDA_NeckPlate.description>
+
+  <HDA_HeavyNeckArmor.label>armure de cou lourde</HDA_HeavyNeckArmor.label>
+  <HDA_HeavyNeckArmor.description>Une armure qui protège solidement le cou.
+Elle est très lourde : la porter sans interruption finit par raidir les épaules.</HDA_HeavyNeckArmor.description>
+
+  <HDA_Heros_scarf.label>écharpe du héros</HDA_Heros_scarf.label>
+  <HDA_Heros_scarf.description>L'écharpe que porte un héros.
+Le voir tenir le premier rang donne du cœur à ceux qui le regardent.</HDA_Heros_scarf.description>
+
+  <HDA_Masochists_Choker.label>collier du masochiste</HDA_Masochists_Choker.label>
+  <HDA_Masochists_Choker.description>Un collier robuste, qui sert aussi d'entrave.
+Le porter est une humiliation profonde.</HDA_Masochists_Choker.description>
+
+  <HDA_RoseNecklace.label>collier de rose</HDA_RoseNecklace.label>
+  <HDA_RoseNecklace.description>Un collier en forme de rose.
+Porté par un homme, il le fait apprécier de son propre sexe.</HDA_RoseNecklace.description>
+
+  <HDA_LilyNecklace.label>collier de lys</HDA_LilyNecklace.label>
+  <HDA_LilyNecklace.description>Un collier en forme de lys.
+Porté par une femme, il la fait apprécier de son propre sexe.</HDA_LilyNecklace.description>
+
+  <HDA_SwindlerNecklace.label>collier de l'escroc</HDA_SwindlerNecklace.label>
+  <HDA_SwindlerNecklace.description>Le collier d'un escroc.
+Qui le porte se sent en bonne santé, et se remet du mal de dos comme des épaules raides.</HDA_SwindlerNecklace.description>
+
+  <HDA_SunNecklace.label>collier du soleil</HDA_SunNecklace.label>
+  <HDA_SunNecklace.description>Un collier en forme de soleil. Porté, il éclaire vivement les alentours.</HDA_SunNecklace.description>
+
+</LanguageData>

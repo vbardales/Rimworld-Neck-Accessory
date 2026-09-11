@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Stage 0 = observer of the same sex (+40), stage 1 = of the other (+5).
+       Japanese distinguishes the two for the rose; the lily uses one word for both. -->
+  <RoseNecklace.stages.nice_guy-0.label>un homme, un vrai</RoseNecklace.stages.nice_guy-0.label>
+  <RoseNecklace.stages.nice_guy-1.label>un homme bien</RoseNecklace.stages.nice_guy-1.label>
+  <LilyNecklace.stages.nice_lady-0.label>une femme bien</LilyNecklace.stages.nice_lady-0.label>
+  <LilyNecklace.stages.nice_lady-1.label>une femme bien</LilyNecklace.stages.nice_lady-1.label>
+
+  <!-- Stage added to the vanilla "Disfigured" thought by Patches_Disfigured.xml. -->
+  <Disfigured.stages.proof_of_hero.label>preuve d'héroïsme</Disfigured.stages.proof_of_hero.label>
+
+  <HeroIsOnlyOne.stages.hero_is_only_one.label>un seul héros suffit</HeroIsOnlyOne.stages.hero_is_only_one.label>
+
+  <NormalsChorker.stages.humilious_choker.label>collier humiliant</NormalsChorker.stages.humilious_choker.label>
+  <NormalsChorker.stages.humilious_choker.description>Me faire porter un collier pareil, quelle humiliation !</NormalsChorker.stages.humilious_choker.description>
+  <MasochistsChorker.stages.masochists_choker.label>collier du masochiste</MasochistsChorker.stages.masochists_choker.label>
+  <MasochistsChorker.stages.masochists_choker.description>Ce collier, quel frisson !</MasochistsChorker.stages.masochists_choker.description>
+
+  <SunNecklace.stages.close_sun.label>soleil trop proche</SunNecklace.stages.close_sun.label>
+  <SunNecklace.stages.close_sun.description>Un peu éblouissant...</SunNecklace.stages.close_sun.description>
+  <SunNecklace.stages.underground_sun.label>soleil souterrain</SunNecklace.stages.underground_sun.label>
+  <SunNecklace.stages.underground_sun.description>Beaucoup trop lumineux !</SunNecklace.stages.underground_sun.description>
+
+</LanguageData>

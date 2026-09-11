@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <RoseNecklace.stages.nice_guy-0.label>いい漢</RoseNecklace.stages.nice_guy-0.label>
+    <RoseNecklace.stages.nice_guy-1.label>いい男</RoseNecklace.stages.nice_guy-1.label>
+    <LilyNecklace.stages.nice_lady-0.label>いい女</LilyNecklace.stages.nice_lady-0.label>
+    <LilyNecklace.stages.nice_lady-1.label>いい女</LilyNecklace.stages.nice_lady-1.label>
+
+
+    <Disfigured.stages.disfigured.label>欠損者</Disfigured.stages.disfigured.label>
+    <Disfigured.stages.proof_of_hero.label>英雄の証</Disfigured.stages.proof_of_hero.label>
+
+    <HeroIsOnlyOne.stages.hero_is_only_one.label>英雄は一人で十分</HeroIsOnlyOne.stages.hero_is_only_one.label>
+
+
+	<NormalsChorker.stages.humilious_choker.label>屈辱的な首輪</NormalsChorker.stages.humilious_choker.label>
+	<NormalsChorker.stages.humilious_choker.description>こんな首輪をつけられるなんて屈辱的だ！</NormalsChorker.stages.humilious_choker.description>
+	<MasochistsChorker.stages.masochists_choker.label>マゾヒストの首輪</MasochistsChorker.stages.masochists_choker.label>
+	<MasochistsChorker.stages.masochists_choker.description>この首輪はすごく興奮する！</MasochistsChorker.stages.masochists_choker.description>
+
+
+	<SunNecklace.stages.close_sun.label>近すぎる太陽</SunNecklace.stages.close_sun.label>
+	<SunNecklace.stages.close_sun.description>少しまぶしい・・・</SunNecklace.stages.close_sun.description>
+
+
+	<SunNecklace.stages.underground_sun.label>地底の太陽</SunNecklace.stages.underground_sun.label>
+	<SunNecklace.stages.underground_sun.description>まぶしすぎる！</SunNecklace.stages.underground_sun.description>
+</LanguageData>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>HeroIsOnlyOne</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>NeckAccessory.ThoughtWorker_HeroIsOnlyOne</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>hero is only one</label>
+				<baseOpinionOffset>-50</baseOpinionOffset>
+ 			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- ===================== マゾヒストの首輪 ===================== -->
+	<ThoughtDef>
+		<defName>NormalsChorker</defName>
+		<workerClass>NeckAccessory.ThoughtWorker_MasochistChoker</workerClass>
+		<nullifyingTraits>
+			<li>Masochist</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>humilious choker</label>
+				<description>It is humiliating to be able to put on such a collar!</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>MasochistsChorker</defName>
+		<workerClass>NeckAccessory.ThoughtWorker_MasochistChoker</workerClass>
+		<requiredTraits>
+			<li>Masochist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>masochists choker</label>
+				<description>This collar is so excited!</description>
+				<baseMoodEffect>25</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- ===================== 薔薇のネックレス ===================== -->
+	<ThoughtDef>
+		<defName>RoseNecklace</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>NeckAccessory.ThoughtWorker_RoseNecklace</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>nice guy</label>
+				<baseOpinionOffset>40</baseOpinionOffset>
+ 			</li>
+			<li>
+				<label>nice guy</label>
+				<baseOpinionOffset>5</baseOpinionOffset>
+ 			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>LilyNecklace</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>NeckAccessory.ThoughtWorker_LilyNecklace</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>nice lady</label>
+				<baseOpinionOffset>40</baseOpinionOffset>
+ 			</li>
+			<li>
+				<label>nice lady</label>
+				<baseOpinionOffset>5</baseOpinionOffset>
+ 			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- ===================== 太陽のネックレス ===================== -->
+	<ThoughtDef>
+		<defName>SunNecklace</defName>
+		<workerClass>NeckAccessory.ThoughtWorker_SunNecklace</workerClass>
+		<stages>
+			<li>
+				<label>close sun</label>
+				<description>A little dazzling!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>underground sun</label>
+				<description>Too bright!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+
+
+</Defs>

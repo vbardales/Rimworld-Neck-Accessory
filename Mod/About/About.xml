@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Nelim's NeckAccessory</name>
+  <author>Udon - 1.6 port: nelim</author>
+  <packageId>nelim.neckaccessory</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/vbardales/Rimworld-Neck-Accessory</url>
+  <description>Update of Udon's NeckAccessory [1.0] to RimWorld 1.6. Eight pieces worn at the neck, on an apparel layer of their own.
+
+I am not the author of this mod. The design, the textures and the original idea are entirely Udon's - all I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the update are mine. If the original author comes back to it, or asks me to take this down, I will.
+
+Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1611488293
+
+What it adds
+
+- Neck plate: forged armor, protecting the neck alone.
+- Heavy neck armor: highly protective, but wearing it for long ends in stiff shoulders. The shoddier the piece, the sooner.
+- Hero's scarf: heartens allies within fifteen tiles. It also changes how others read the wearer's scars - no longer a disfigurement, but a record of service. Two wearers in the same faction cannot stand each other: there is room for only one hero.
+- Masochist's choker: humiliating for almost everyone, a delight for whoever has the matching trait.
+- Rose and lily necklaces: worn by the sex they address, they build an affinity that eventually settles as a trait; worn by the other, they undo it. They also change how others feel about the wearer.
+- Swindler's necklace: mends a bad back, frailty, cataracts and stiff shoulders - very slowly, and only the shoulders at a rate you will actually notice.
+- Sun necklace: lights the surroundings, following its wearer. A little dazzling, and thoroughly unpleasant for an undergrounder.
+
+What changed in the 1.6 update
+
+- The six original assemblies are merged into one, rewritten for 1.6. In 1.6 worn apparel is never ticked, and the whole mechanism rested on that; it is now driven from the map instead. Four of the eight pieces would otherwise have done nothing at all, without a single error to say so.
+- HealthDifferenceAuraCore, which the scarf depended on, is dead and nowhere to be found. Its aura is rewritten here.
+- The mod redefined the vanilla "Disfigured" thought outright, overwriting whatever the game or another mod puts there. It is now only patched.
+- The mod ships English, Udon's own Japanese, and French.
+
+Inherited limitation, left as it was in 1.0: none of the pieces is drawn on the pawn. The mod provides no worn textures, and the update does not invent any.
+
+Content mod: removing it mid-game destroys any pieces already crafted.
+
+Source, changelog and the full list of what the port changed: https://github.com/vbardales/Rimworld-Neck-Accessory
+
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to Udon for the mod.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+  <loadAfter>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Royalty</li>
+    <li>Ludeon.RimWorld.Ideology</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>Ludeon.RimWorld.Anomaly</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+  </loadAfter>
+</ModMetaData>

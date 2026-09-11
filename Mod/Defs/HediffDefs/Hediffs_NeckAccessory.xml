@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>HDA_Hediff_Hero_inspirationt</defName>
+		<label>Hero's Inspiration</label>
+		<description>Someone nearby is wearing the hero's scarf, and it is hard to feel like losing.</description>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.5, 0.8, 0.5)</defaultLabelColor>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-12.0</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>I do not feel like losing as long as there are heroes!</label>
+				<statOffsets>
+					<MeleeHitChance>3.0</MeleeHitChance>
+					<ShootingAccuracyPawn>3.0</ShootingAccuracyPawn>
+					<MeleeDodgeChance>3.0</MeleeDodgeChance>
+					<AimingDelayFactor>-0.05</AimingDelayFactor>
+					<MentalBreakThreshold>-0.4</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>InvitationForForbiddance</defName>
+		<label>Invitation for Forbiddance</label>
+		<description>A growing ease with attention from one's own sex.</description>
+		<initialSeverity>0.01</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1.0, 1.0, 0)</defaultLabelColor>
+		<stages>
+			<li>
+				<label>A gaze from homosexuality is comfortable.</label>
+				<statOffsets>
+					<MentalBreakThreshold>-0.01</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<label>A gaze from homosexuality is comfortable.</label>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+			<li>
+				<label>A gaze from homosexuality is comfortable.</label>
+				<minSeverity>0.95</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>-0.10</MentalBreakThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>StiffShoulder</defName>
+		<label>stiff shoulder</label>
+		<description>Shoulders worn down by carrying too much weight on the neck for too long.</description>
+		<labelNoun>a stiff shoulder</labelNoun>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.001</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>none</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.5</minSeverity>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+					<GeneralLaborSpeed>-0.05</GeneralLaborSpeed>
+					<MeleeHitChance>-0.25</MeleeHitChance>
+					<AimingDelayFactor>0.025</AimingDelayFactor>
+				</statOffsets>
+      		</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.7</minSeverity>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+					<GeneralLaborSpeed>-0.1</GeneralLaborSpeed>
+					<MeleeHitChance>-0.5</MeleeHitChance>
+					<AimingDelayFactor>0.05</AimingDelayFactor>
+				</statOffsets>
+      		</li>
+			<li>
+				<label>extreme</label>
+				<minSeverity>0.9</minSeverity>
+				<statOffsets>
+					<WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+					<GeneralLaborSpeed>-0.3</GeneralLaborSpeed>
+					<MeleeHitChance>-1.0</MeleeHitChance>
+					<AimingDelayFactor>0.20</AimingDelayFactor>
+				</statOffsets>
+      		</li>
+		</stages>
+	</HediffDef>
+</Defs>

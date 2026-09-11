@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<HDA_RoseNecklace.label>薔薇のネックレス</HDA_RoseNecklace.label>
+	<HDA_RoseNecklace.description>薔薇をかたどったネックレスです。男性が身に着けると同性から好かれるようになります。</HDA_RoseNecklace.description>
+	<HDA_LilyNecklace.label>百合のネックレス</HDA_LilyNecklace.label>
+	<HDA_LilyNecklace.description>百合をかたどったネックレスです。女性身に着けると同性から好かれるようになります。</HDA_LilyNecklace.description>
+	<HDA_SwindlerNecklace.label>詐欺師のネックレス</HDA_SwindlerNecklace.label>
+	<HDA_SwindlerNecklace.description>詐欺師のネックレスです。装備すると健康になったような気がします。</HDA_SwindlerNecklace.description>
+	<HDA_SunNecklace.label>太陽のネックレス</HDA_SunNecklace.label>
+	<HDA_SunNecklace.description>太陽をかたどったネックレスです。装備すると周辺を明るく照らします。</HDA_SunNecklace.description>
+
+	<HDA_Masochists_Choker.label>マゾヒストの首輪</HDA_Masochists_Choker.label>
+	<HDA_Masochists_Choker.description>拘束具としても使用される、頑丈な首輪です。装備するとひどい屈辱を感じます。</HDA_Masochists_Choker.description>
+
+	<HDA_Heros_scarf.label>英雄のマフラー</HDA_Heros_scarf.label>
+	<HDA_Heros_scarf.description>英雄が身に着けるマフラーです。先陣に立つ姿は見る者を勇気づけます。</HDA_Heros_scarf.description>
+
+
+	<HDA_NeckPlate.label>プレートアーマー(首)</HDA_NeckPlate.label>
+	<HDA_NeckPlate.description>首周りを覆う厚い鎧です。。</HDA_NeckPlate.description>
+
+	<HDA_HeavyNeckArmor.label>重装首鎧</HDA_HeavyNeckArmor.label>
+	<HDA_HeavyNeckArmor.description>首をしっかり守る装甲です。とても重いので、装着し続けると肩こりになります。</HDA_HeavyNeckArmor.description>
+</LanguageData>

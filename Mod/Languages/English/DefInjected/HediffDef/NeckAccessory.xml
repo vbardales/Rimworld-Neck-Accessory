@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Stage keys use the handle built from the def's English stage label
+       (punctuation dropped, spaces to underscores, duplicates suffixed -0/-1),
+       the same scheme Core uses. -->
+
+  <HDA_Hediff_Hero_inspirationt.label>hero's inspiration</HDA_Hediff_Hero_inspirationt.label>
+  <HDA_Hediff_Hero_inspirationt.description>Someone nearby is wearing the hero's scarf, and it is hard to feel like losing.</HDA_Hediff_Hero_inspirationt.description>
+  <HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>As long as the hero stands, I don't feel like losing!</HDA_Hediff_Hero_inspirationt.stages.I_do_not_feel_like_losing_as_long_as_there_are_heroes.label>
+
+  <InvitationForForbiddance.label>forbidden invitation</InvitationForForbiddance.label>
+  <InvitationForForbiddance.description>A growing ease with attention from one's own sex.</InvitationForForbiddance.description>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>A gaze from one's own sex feels comfortable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-0.label>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>A gaze from one's own sex feels comfortable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-1.label>
+  <InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>A gaze from one's own sex feels comfortable.</InvitationForForbiddance.stages.A_gaze_from_homosexuality_is_comfortable-2.label>
+
+  <StiffShoulder.label>stiff shoulder</StiffShoulder.label>
+  <StiffShoulder.labelNoun>a stiff shoulder</StiffShoulder.labelNoun>
+  <StiffShoulder.description>Shoulders worn down by carrying too much weight on the neck for too long.</StiffShoulder.description>
+  <StiffShoulder.stages.none.label>none</StiffShoulder.stages.none.label>
+  <StiffShoulder.stages.minor.label>minor</StiffShoulder.stages.minor.label>
+  <StiffShoulder.stages.major.label>major</StiffShoulder.stages.major.label>
+  <StiffShoulder.stages.extreme.label>extreme</StiffShoulder.stages.extreme.label>
+
+</LanguageData>
