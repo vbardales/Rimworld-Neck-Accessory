@@ -203,3 +203,12 @@ validation is claimed and RimWorld was not launched.
 
 Next gate is Preview generated: inspect the historical installed Preview against the current
 requirements, and correct only if needed. No preview conformity is inferred from this icon.
+## Icon preference override — 2026-09-13
+
+The user explicitly preferred the previous necklace-only icon over the generated mascot.
+Restored Art/ModIcon-before-mascot.png byte for byte to Mod/About/ModIcon.png (128x128 PNG,
+15,268 bytes), and directly inspected the restored design. This explicit user preference
+supersedes the generic mascot convention. The absence of a mascot is therefore no longer
+a defect for this mod, and stage remains `ModIcon générée`. The previous mascot acceptance
+above is superseded; its source and QA image remain archived in Art/, not distributed.
+No runtime, settings or translation changes. Existing build validation remains applicable.

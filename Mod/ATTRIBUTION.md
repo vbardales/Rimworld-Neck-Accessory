@@ -81,3 +81,7 @@ Local reference: Steam workshop/content/294100/1611488293/About/About.xml.
 The mascot ModIcon was generated with OpenAI image generation for this continuation.
 It is separate from Udon's original textures and artwork; the original assets retain their
 existing rights status. The previous icon and generated source are preserved in Art/.
+
+
+The user subsequently selected the previous necklace-only icon, restored as the distributed
+ModIcon. The OpenAI-generated mascot is archived in Art/ and is not the installed icon.

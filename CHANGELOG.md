@@ -74,3 +74,6 @@ only stiff shoulders move at a noticeable rate.
 - Replace the necklace-only icon with the orange mascot and sun pendant; verify at 128 and 32 pixels.
 - Preserve the previous icon and generated source in Art/.
 
+## 2026-09-13 — Restore preferred icon
+
+- Restore the previous necklace-only ModIcon at the user's request, overriding the generic mascot convention.
