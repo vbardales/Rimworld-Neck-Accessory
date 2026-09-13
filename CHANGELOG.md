@@ -77,3 +77,9 @@ only stiff shoulders move at a noticeable rate.
 ## 2026-09-13 — Restore preferred icon
 
 - Restore the previous necklace-only ModIcon at the user's request, overriding the generic mascot convention.
+
+## 2026-09-13 — Renew preview
+
+- Replace the old-name sprite preview with a tailoring-workshop scene and current title.
+- Verify the 896x504 PNG is below 1 MB and readable at thumbnail size.
+- Recheck and retain the preferred 128x128 ModIcon.

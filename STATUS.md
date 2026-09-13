@@ -7,7 +7,7 @@ packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 visibility:   public
 detached:     yes
-stage:        ModIcon générée
+stage:        Preview générée
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -16,7 +16,6 @@ showcase:     partial
 tested_on:
 workshop:
 remaining:
-  - unverified: historical Preview.png restored from GitHub, conformity not audited
   - defect: required final Steam-format source link is missing
   - unverified: sunlight object UI exposure and French coverage
   - unverified: behavioral scenarios and automated tests
@@ -212,3 +211,27 @@ supersedes the generic mascot convention. The absence of a mascot is therefore n
 a defect for this mod, and stage remains `ModIcon générée`. The previous mascot acceptance
 above is superseded; its source and QA image remain archived in Art/, not distributed.
 No runtime, settings or translation changes. Existing build validation remains applicable.
+
+## Preview transition and icon size check — 2026-09-13
+
+Current stage: `Preview générée`, using the exact workflow label.
+Rechecked the user's preferred installed ModIcon directly: PNG, 128x128, 15,268 bytes.
+It is appropriately sized and was not changed.
+
+Inspected the historical Preview: 896x504, 228,504 bytes, but its text retained the old name
+and its background was an enlarged necklace sprite rather than the required colony scene.
+Preserved it in Art/Preview-before-renew.png and generated a new tailoring-workshop preview
+with OpenAI image generation. It shows neck armor, a scarf and a sun pendant on a worktable,
+with the current Renew/unofficial title and English subtitle.
+
+Installed Mod/About/Preview.png is PNG, 896x504, 725,197 bytes (below 1 MB).
+Directly inspected the generated image, installed image and Art/Preview-268px-QA.png:
+title and accessory silhouettes remain identifiable at thumbnail size; high oblique view,
+plank floor and simple workshop composition have no concrete camera concern. Wood/charcoal
+base, gold lamp/pendant accent and burgundy scarf are visually separated. Original generated
+composition including typography is preserved as Art/Preview-renew-source.png.
+No historical generation report or separate game screenshot comparison was used as a gate.
+
+Runtime files, DLL, settings and translations are unchanged; their earlier independent
+checks retain their scope. No in-game validation is claimed. The next transition is preOptions:
+finish the required final Steam-format source link and check description/name conventions.

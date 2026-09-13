@@ -85,3 +85,10 @@ existing rights status. The previous icon and generated source are preserved in 
 
 The user subsequently selected the previous necklace-only icon, restored as the distributed
 ModIcon. The OpenAI-generated mascot is archived in Art/ and is not the installed icon.
+
+
+## New Preview — 2026-09-13
+
+The current workshop-scene Preview and its typography were generated using OpenAI image
+generation for Neck Accessory Renew. The historical preview and new generated source are
+preserved in Art/. This new illustration does not change the rights status of original assets.
