@@ -62,3 +62,9 @@ run nowhere.
 Two defects inherited from the original are left in place on purpose and documented in
 `ATTRIBUTION.md`: no piece is drawn on the pawn, and the swindler's necklace heals so slowly that
 only stiff shoulders move at a noticeable rate.
+
+## 2026-09-13 — Standalone repository
+
+- Adopt the Neck Accessory Renew (unofficial) title while preserving package and save identifiers.
+- Establish the standalone checkout, keep build intermediates local, and refresh the scoped upstream rights review.
+- Preserve existing artwork and runtime behavior; no in-game validation is claimed.

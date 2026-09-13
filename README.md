@@ -1,4 +1,7 @@
-# Neck Accessory 1.6
+# Neck Accessory Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent.
+If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 Update of Udon's **NeckAccessory [1.0]** to RimWorld 1.6.
 
@@ -7,7 +10,7 @@ Udon's — all I did was the work needed to make it run on 1.6. Credit goes to t
 update are mine.
 
 Original mod: https://steamcommunity.com/sharedfiles/filedetails/?id=1611488293 (stays on 1.0, last
-updated 26 January 2019). The page is still online; the mod is abandoned, not withdrawn.
+updated 26 January 2019). The dated upstream support and rights review is recorded in ATTRIBUTION.md.
 
 ## What the mod does
 

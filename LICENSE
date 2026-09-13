@@ -24,7 +24,7 @@ SOFTWARE.
 ---------------------------------------------------------------------------
 SCOPE OF THE ABOVE
 
-The MIT licence above covers only what the 1.6 update added:
+The MIT licence above covers only original contributions by nelim in the 1.6 update. It does not cover inherited or derived third-party content. Subject to that limitation, the contributions include:
 
   - the C# written for this update and the assembly built from it
   - the English and French translations

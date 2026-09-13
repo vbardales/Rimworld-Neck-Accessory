@@ -5,7 +5,7 @@
 - **Original author:** Udon
 - **Source:** Steam Workshop `1611488293`, last supported version 1.0, last updated
   26 January 2019 — https://steamcommunity.com/sharedfiles/filedetails/?id=1611488293
-  The page is still online. The mod is abandoned, not withdrawn.
+  The page was fetched on 2026-09-13; see the dated rights review below.
 - **Reused here:** the whole mod — defs, textures, Japanese translation, and the logic of the six
   assemblies, rewritten.
 
@@ -57,3 +57,22 @@ to show.
 **No piece is visible on the pawn.** The mod provides no `wornGraphicPath` and none of the textures
 that would go with it — the `_m` files it ships are masks for the `CutoutComplex` shader, not worn
 views. That was already the case in 1.0.
+
+## Upstream rights review — 2026-09-13
+
+Reviewed the original Steam description and all five comments displayed for item 1611488293,
+and the installed original About.xml and file inventory. Steam lists version 1.0 and an update
+on 26 January 2019; installed metadata supports 1.0 only. No declared 1.6 support, licence,
+explicit reuse permission or explicit prohibition was found in those sources. The original
+file inventory contains no licence/readme/copyright file. This is a scoped search result,
+not proof that no other statement exists.
+
+Under the project workflow the source remains `silent` (no declared 1.6 support and no reuse
+permission found). The existing repository remains public, with the unofficial title,
+explicit lack-of-consent notice, original credits and removal commitment. This classification
+and publication convention grant no rights over Udon's work. The scoped MIT notice covers
+only original contributions by nelim; it does not relicense inherited or derived third-party
+content. Steam visibility was not used to infer author intent or withdrawal.
+
+Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1611488293&l=english
+Local reference: Steam workshop/content/294100/1611488293/About/About.xml.
