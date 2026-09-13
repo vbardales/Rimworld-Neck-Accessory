@@ -76,3 +76,8 @@ content. Steam visibility was not used to infer author intent or withdrawal.
 
 Source: https://steamcommunity.com/sharedfiles/filedetails/?id=1611488293&l=english
 Local reference: Steam workshop/content/294100/1611488293/About/About.xml.
+## New ModIcon — 2026-09-13
+
+The mascot ModIcon was generated with OpenAI image generation for this continuation.
+It is separate from Udon's original textures and artwork; the original assets retain their
+existing rights status. The previous icon and generated source are preserved in Art/.

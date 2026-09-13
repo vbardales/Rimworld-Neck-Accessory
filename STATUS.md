@@ -7,7 +7,7 @@ packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 visibility:   public
 detached:     yes
-stage:        horsMonoRepo
+stage:        ModIcon générée
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -17,7 +17,6 @@ tested_on:
 workshop:
 remaining:
   - unverified: historical Preview.png restored from GitHub, conformity not audited
-  - defect: icon does not follow the current mascot style
   - defect: required final Steam-format source link is missing
   - unverified: sunlight object UI exposure and French coverage
   - unverified: behavioral scenarios and automated tests
@@ -186,3 +185,21 @@ location, missing-preview and upstream-evidence findings while preserving that a
 Next transition only: resolve the current ModIcon style discrepancy, preserving the verified
 build result and checking the final installed image. Preview conformity, final description link,
 sunlight FR coverage and gameplay tests remain separate later work. No later gate is certified.
+## ModIcon transition — 2026-09-13
+
+Current stage: `ModIcon générée` (exact workflow label), superseding the earlier icon finding.
+Generated an original orange mascot with a wink, upper-right ponytail, burgundy collar and
+sun pendant using OpenAI image generation. Installed Mod/About/ModIcon.png: 128x128 PNG,
+18,693 bytes. Directly inspected both the installed image and the 32x32 thumbnail: face,
+collar and sun pendant remain distinguishable; no text, frame or watermark. The broad outlines,
+near-black background and limited orange/burgundy/gold palette follow the mascot convention.
+Minor shading is visible in the source but does not impair the flat thumbnail presentation.
+
+Preserved the previous icon as Art/ModIcon-before-mascot.png, generated source as
+Art/ModIcon-mascot-source.png and inspection thumbnail as Art/ModIcon-32px-QA.png.
+Only artwork/documentation changed. The previously verified build and matching DLL remain
+applicable; no source, gameplay XML, settings or translations changed. No new gameplay
+validation is claimed and RimWorld was not launched.
+
+Next gate is Preview generated: inspect the historical installed Preview against the current
+requirements, and correct only if needed. No preview conformity is inferred from this icon.

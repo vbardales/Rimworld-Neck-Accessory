@@ -68,3 +68,9 @@ only stiff shoulders move at a noticeable rate.
 - Adopt the Neck Accessory Renew (unofficial) title while preserving package and save identifiers.
 - Establish the standalone checkout, keep build intermediates local, and refresh the scoped upstream rights review.
 - Preserve existing artwork and runtime behavior; no in-game validation is claimed.
+
+## 2026-09-13 — Mascot icon
+
+- Replace the necklace-only icon with the orange mascot and sun pendant; verify at 128 and 32 pixels.
+- Preserve the previous icon and generated source in Art/.
+
