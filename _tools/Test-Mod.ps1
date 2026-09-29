@@ -227,6 +227,11 @@ Check 'images: Preview under 1 MB, 16:9; ModIcon 128 px' {
     if ((Png-Size $p) -ne '896 x 504') { "Preview.png is $(Png-Size $p)" }
     if ((Png-Size (Join-Path $mod 'About\ModIcon.png')) -ne '128 x 128') { 'ModIcon.png is not 128 x 128' }
 }
+Check 'the gallery starts with a byte-for-byte copy of the Preview (Art/Workshop/00-preview.png)' {
+    $g = Join-Path $root 'Art\Workshop\00-preview.png'
+    if (-not (Test-Path $g)) { 'Art/Workshop/00-preview.png is missing'; return }
+    if ((Get-FileHash $g).Hash -ne (Get-FileHash (Join-Path $mod 'About\Preview.png')).Hash) { '00-preview.png differs from Mod/About/Preview.png: recopy it' }
+}
 Check 'the distributed copies of LICENSE and ATTRIBUTION are identical to the root ones' {
     foreach ($f in 'LICENSE', 'ATTRIBUTION.md') {
         if ((Get-FileHash (Join-Path $root $f)).Hash -ne (Get-FileHash (Join-Path $mod $f)).Hash) { "Mod/$f differs from $f" }

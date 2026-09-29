@@ -60,6 +60,14 @@ and the pass matrix, are in `TESTING.md`. No optional mod, no incompatibility an
 reason there. Manual tests: none. **The Pickle suite has not been played**, which is not a criterion of `done`.
 Supersedes the "not reached" rows of the 2026-09-29 audit table for `preTest -> done`.
 
+## Preview and gallery — 2026-09-29
+
+New showcase rules: the Preview carries the ModIcon cut out of its background in a corner (left +15deg, right -15deg), and the
+gallery starts with `00-`, a byte-for-byte copy of the Preview. `Mod/About/Preview.png` is now `Art/Preview-before-icon.png` plus the
+cut-out icon, bottom-left, +15deg (`_tools/compose-preview.cjs`, opened and looked at: 896x504, 733,625 bytes). `Art/Workshop/00-preview.png`
+is its copy; the offline suite checks that they stay identical (25 checks green). No capture exists yet, so the gallery is one image.
+This changed `Mod/About/Preview.png` after the two Pickle tickets were filed at `c004fae`: it does not touch what those tickets test.
+
 ### What `done -> tested` will need (2026-09-29 criteria)
 
 - No scenario tagged `@wip`: repaired and replayed, or deleted with the reason.
