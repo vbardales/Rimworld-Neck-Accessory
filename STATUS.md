@@ -7,8 +7,8 @@ packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 visibility:   public
 detached:     yes
-stage:        showcase
-workflow_stage: l10n
+stage:        done
+workflow_stage: done
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -20,11 +20,12 @@ tested_on:
 workshop:
 remaining:
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
-  - feature: no functional scenarios, no automated behavioral tests, no Pickle suite and no written reason for the absence (preTest -> done)
+  - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
+  - unverified: which stage the hero scarf gives the Disfigured thought (no scenario, see TESTING.md)
   - unverified: in-game EN/FR UI, logs, new game and existing save
   - unverified: current upstream permission and supported-version evidence (Steam page 1611488293 not rechecked)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, audit by the mod session
+updated:      2026-09-29, tests written
 ---
 
 ## Audit — 2026-09-29
@@ -50,6 +51,15 @@ no Pickle evidence exists; no `PublishedFileId.txt` exists, so the item is not p
 Upstream: Udon's mod lives only on the Steam Workshop (1611488293); no git repository was found, so
 `upstream_mod_remotes` is `N/A` and there is no repository to send pull requests to.
 
+## Tests written — 2026-09-29
+
+Stage `done` (`preTest -> done`): offline suite `_tools/Test-Mod.ps1` run and green (24 checks, Windows PowerShell 5.1,
+plus a negative control on the Disfigured patch); Pickle suite written (`Tests/Pickle/`: 3 features, a steps assembly that
+compiles with 0 errors, no scenario tagged `@wip`); functional scenarios with preconditions, actions and expected results,
+and the pass matrix, are in `TESTING.md`. No optional mod, no incompatibility and no DLC-absent pass applies, each with its
+reason there. Manual tests: none. **The Pickle suite has not been played**, which is not a criterion of `done`.
+Supersedes the "not reached" rows of the 2026-09-29 audit table for `preTest -> done`.
+
 ### What `done -> tested` will need (2026-09-29 criteria)
 
 - No scenario tagged `@wip`: repaired and replayed, or deleted with the reason.
@@ -66,8 +76,7 @@ is the sole proof of a check the newest did not repeat. Screenshots may be minif
 
 ### Next work, in order
 
-1. Write scenarios and tests, or justify their absence; write the Pickle suite or its justification.
-2. Then the in-game passes (via `Submit-PickleRun.ps1`; never launch the game directly).
+1. The in-game passes (via `Submit-PickleRun.ps1`; never launch the game directly).
 
 # Neck Accessory Renew (unofficial) — status
 

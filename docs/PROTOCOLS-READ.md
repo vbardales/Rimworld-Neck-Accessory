@@ -13,7 +13,8 @@ Version = last commit of the file in the monorepo (`git log -1 -- <file>`), 2026
 | STYLE_RIMWORLD.md | 90d51374 | headings only | no: the Preview and icon are already installed and were not regenerated |
 | WORKSHOP_COMMENTS.md | 08878789 (2026-09-29) | headings only | not yet: needed at prepublication (thanks to Udon, who has a Workshop page) |
 | scripts/SEARCHING.md | 90d51374 | headings only | no: no corpus search was needed |
-| PickleTools/README.md, Headless/README.md, docs/steps.md | not versioned in the monorepo | headings only | not yet: needed when the Pickle suite is written |
+| PickleTools/README.md, Headless/README.md, docs/steps.md | not versioned in the monorepo | headings only | not yet: needed when the runs are queued |
+| PickleTools/Authoring/README.md | not versioned in the monorepo | in full | yes: suite layout, pass matrix, steps, waits |
 | Rimworld-Release-Admin/docs/OPERATIONS.md | not versioned in the monorepo | headings only | not yet: needed at prepublication |
 | Rimworld-Ticket-Dispatcher/docs/WELCOME.md, SUBMIT.md | not versioned in the monorepo | headings only | not yet: needed before the first Pickle request |
 | STATUS.md, CHANGELOG.md, ATTRIBUTION.md | e0c80b7 (this repo) | in full | yes |
