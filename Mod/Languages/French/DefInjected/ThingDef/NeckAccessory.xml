@@ -36,4 +36,20 @@ Qui le porte se sent en bonne santé, et se remet du mal de dos comme des épaul
   <HDA_SunNecklace.label>collier du soleil</HDA_SunNecklace.label>
   <HDA_SunNecklace.description>Un collier en forme de soleil. Porté, il éclaire vivement les alentours.</HDA_SunNecklace.description>
 
+
+  <HDA_SunLight_Awful.label>lumière du soleil</HDA_SunLight_Awful.label>
+  <HDA_SunLight_Awful.description>Une lumière du jour.</HDA_SunLight_Awful.description>
+  <HDA_SunLight_Poor.label>lumière du soleil</HDA_SunLight_Poor.label>
+  <HDA_SunLight_Poor.description>Une lumière du jour.</HDA_SunLight_Poor.description>
+  <HDA_SunLight_Normal.label>lumière du soleil</HDA_SunLight_Normal.label>
+  <HDA_SunLight_Normal.description>Une lumière du jour.</HDA_SunLight_Normal.description>
+  <HDA_SunLight_Good.label>lumière du soleil</HDA_SunLight_Good.label>
+  <HDA_SunLight_Good.description>Une lumière du jour.</HDA_SunLight_Good.description>
+  <HDA_SunLight_Excellent.label>lumière du soleil</HDA_SunLight_Excellent.label>
+  <HDA_SunLight_Excellent.description>Une lumière du jour.</HDA_SunLight_Excellent.description>
+  <HDA_SunLight_Masterwork.label>lumière du soleil</HDA_SunLight_Masterwork.label>
+  <HDA_SunLight_Masterwork.description>Une lumière du jour.</HDA_SunLight_Masterwork.description>
+  <HDA_SunLight_Legendary.label>lumière du soleil</HDA_SunLight_Legendary.label>
+  <HDA_SunLight_Legendary.description>Une lumière du jour.</HDA_SunLight_Legendary.description>
+
 </LanguageData>

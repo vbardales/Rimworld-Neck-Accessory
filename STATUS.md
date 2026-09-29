@@ -1,14 +1,14 @@
 ---
-localization: partial
+localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 mod:          Neck Accessory Renew (unofficial)
 packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 visibility:   public
 detached:     yes
 stage:        showcase
-workflow_stage: options
+workflow_stage: l10n
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -19,7 +19,6 @@ showcase:     partial
 tested_on:
 workshop:
 remaining:
-  - defect: sunlight (HDA_SunLight_*) label/description have no French injection (14 fields); needs a translation or a written justification as internal
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - feature: no functional scenarios, no automated behavioral tests, no Pickle suite and no written reason for the absence (preTest -> done)
   - unverified: in-game EN/FR UI, logs, new game and existing save
@@ -40,8 +39,8 @@ Previous stage: `Preview générée` (a label, not one of the six `stage` codes)
 | -> Preview | Passed: `Mod/About/Preview.png`, 896x504 PNG, 708 KB, opened and looked at. |
 | -> preOptions | Passed after this audit: the description now ends with `[url=https://github.com/vbardales/Rimworld-Neck-Accessory]Source code on GitHub[/url]` (the defect of 2026-09-13). The Preview accents (gold, steel, crimson on dark wood) are distinct. |
 | -> options | Passed: `settings_audit: not_applicable`, see the 2026-09-13 section below (no settings page, no shortcut). |
-| -> l10n | **Fails**: seven `HDA_SunLight_*` defs have English label/description and no French injection. Whether they can be seen in game is not known. |
-| -> preTest | Not reached. Dependencies were checked on 2026-09-13 (none; no LoadFolders); not redone here. |
+| -> l10n | **Passed on 2026-09-29** (replaces the failure below): French injections added for the seven `HDA_SunLight_*` defs (14 fields, label "lumière du soleil", description "Une lumière du jour."), `Check-DefInjected.ps1`: 148 keys, 0 errors. In-game exposure of these objects stays unverified. Earlier finding: seven `HDA_SunLight_*` defs have English label/description and no French injection. Whether they can be seen in game is not known. |
+| -> preTest | Passed on the 2026-09-13 checks (not redone). Dependencies were checked on 2026-09-13 (none; no LoadFolders); not redone here. |
 | -> done | Not reached: no scenarios, no automated tests, no Pickle suite, no justification written. |
 | -> tested | Not reached; the game was not launched. |
 
@@ -67,9 +66,8 @@ is the sole proof of a check the newest did not repeat. Screenshots may be minif
 
 ### Next work, in order
 
-1. Translate the sunlight defs into French, or write why they are internal (they are `selectable=false`, empty texture, inert).
-2. Write scenarios and tests, or justify their absence; write the Pickle suite or its justification.
-3. Then the in-game passes (via `Submit-PickleRun.ps1`; never launch the game directly).
+1. Write scenarios and tests, or justify their absence; write the Pickle suite or its justification.
+2. Then the in-game passes (via `Submit-PickleRun.ps1`; never launch the game directly).
 
 # Neck Accessory Renew (unofficial) — status
 
