@@ -12,3 +12,5 @@ Source/**/bin/
 Tests/Pickle/Evidence/
 Tests/Pickle/results/
 evidence/
+desktop.ini
+Art/*.ico
