@@ -5,3 +5,10 @@ Source/**/bin/
 .idea/
 *.user
 .firecrawl/
+
+# Game textures compiled by tools, evidence and reports stay on disk, not in git
+*.dds
+*.DDS
+Tests/Pickle/Evidence/
+Tests/Pickle/results/
+evidence/

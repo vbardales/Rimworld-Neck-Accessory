@@ -7,22 +7,69 @@ packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 visibility:   public
 detached:     yes
-stage:        Preview générée
+stage:        showcase
+workflow_stage: options
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
+upstream_mod_remotes:
+  - N/A
 dependencies: none
 showcase:     partial
 tested_on:
 workshop:
 remaining:
-  - defect: required final Steam-format source link is missing
-  - unverified: sunlight object UI exposure and French coverage
-  - unverified: behavioral scenarios and automated tests
+  - defect: sunlight (HDA_SunLight_*) label/description have no French injection (14 fields); needs a translation or a written justification as internal
+  - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
+  - feature: no functional scenarios, no automated behavioral tests, no Pickle suite and no written reason for the absence (preTest -> done)
   - unverified: in-game EN/FR UI, logs, new game and existing save
+  - unverified: current upstream permission and supported-version evidence (Steam page 1611488293 not rechecked)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-13, evidence-based audit
+updated:      2026-09-29, audit by the mod session
 ---
+
+## Audit — 2026-09-29
+
+Previous stage: `Preview générée` (a label, not one of the six `stage` codes). Retained:
+`stage: showcase`, `workflow_stage: options`. Revision audited: `e0c80b7` plus the local changes below.
+
+| Transition | Result |
+| --- | --- |
+| dansMonoRepo -> horsMonoRepo | Passed. The folder was a stale copy inside the monorepo (4 tracked files); it is now the standalone checkout of `vbardales/Rimworld-Neck-Accessory`, `main` = `origin/main`, and it is untracked and ignored by the monorepo. Public repo, STATUS/README/ATTRIBUTION/LICENSE/CHANGELOG present, `ATTRIBUTION.md` and `LICENSE` identical to their `Mod/` copies (cmp). |
+| -> ModIcon | Passed as of 2026-09-13 (128x128 PNG, 15,268 bytes; the owner chose the necklace-only icon over the mascot). Not regenerated. |
+| -> Preview | Passed: `Mod/About/Preview.png`, 896x504 PNG, 708 KB, opened and looked at. |
+| -> preOptions | Passed after this audit: the description now ends with `[url=https://github.com/vbardales/Rimworld-Neck-Accessory]Source code on GitHub[/url]` (the defect of 2026-09-13). The Preview accents (gold, steel, crimson on dark wood) are distinct. |
+| -> options | Passed: `settings_audit: not_applicable`, see the 2026-09-13 section below (no settings page, no shortcut). |
+| -> l10n | **Fails**: seven `HDA_SunLight_*` defs have English label/description and no French injection. Whether they can be seen in game is not known. |
+| -> preTest | Not reached. Dependencies were checked on 2026-09-13 (none; no LoadFolders); not redone here. |
+| -> done | Not reached: no scenarios, no automated tests, no Pickle suite, no justification written. |
+| -> tested | Not reached; the game was not launched. |
+
+Other checks done today: no `.dds` file exists in the tree or in git (the ignore rule was added anyway);
+no Pickle evidence exists; no `PublishedFileId.txt` exists, so the item is not pre-published and
+`CHANGELOG.md` keeps `1.0.0 — unreleased` (write `0.1.0` — "creation of a publishIdFile" once the file appears).
+Upstream: Udon's mod lives only on the Steam Workshop (1611488293); no git repository was found, so
+`upstream_mod_remotes` is `N/A` and there is no repository to send pull requests to.
+
+### What `done -> tested` will need (2026-09-29 criteria)
+
+- No scenario tagged `@wip`: repaired and replayed, or deleted with the reason.
+- Every conditional scenario (`@requires:<packageId>`) has run, with its report read. There is no optional mod today.
+- No manual test left to validate: each one is automated and green, or listed as not applicable with its reason.
+- `@review` captures opened and looked at.
+
+### Evidence to keep
+
+Evidence stays on disk, never in git: `Tests/Pickle/Evidence/`, `Tests/Pickle/results/` and `evidence/` are in `.gitignore`
+(as is `*.dds`). Keep, per scenario, the newest report for the revision now in the repository, plus an older one only if it
+is the sole proof of a check the newest did not repeat. Screenshots may be minified. One text line per run goes in
+`docs/runs/`. Never delete a report a `STATUS.md` field points to; repoint first.
+
+### Next work, in order
+
+1. Translate the sunlight defs into French, or write why they are internal (they are `selectable=false`, empty texture, inert).
+2. Write scenarios and tests, or justify their absence; write the Pickle suite or its justification.
+3. Then the in-game passes (via `Submit-PickleRun.ps1`; never launch the game directly).
 
 # Neck Accessory Renew (unofficial) — status
 
