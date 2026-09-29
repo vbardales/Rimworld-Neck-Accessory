@@ -221,7 +221,7 @@ namespace NeckAccessory.PickleSteps
                 $"{lights.Count} sun light(s) remain, first at {lights.FirstOrDefault()?.Position}");
         }
 
-        /// <summary>Reads a mood thought the way the mood tab does, situational ones included.</summary>
+        /// <summary>Reads a mood thought the way the mood tab does: situational ones included, nullified ones (by a trait) left out.</summary>
         [Then("Neck Accessory: {string} feels the mood thought {string} at stage {int}", TimeoutSeconds = 40f)]
         public async Task FeelsMoodThought(PickleContext ctx, string name, string thoughtName, int stage)
         {
@@ -231,6 +231,7 @@ namespace NeckAccessory.PickleSteps
             {
                 var thoughts = new List<Thought>();
                 pawn.needs.mood.thoughts.GetAllMoodThoughts(thoughts);
+                thoughts.RemoveAll(t => ThoughtUtility.ThoughtNullified(pawn, t.def));
                 seen = string.Join(", ", thoughts.Select(t => t.def.defName + "@" + t.CurStageIndex));
                 if (thoughts.Any(t => t.def.defName == thoughtName && t.CurStageIndex == stage))
                 {
@@ -249,6 +250,7 @@ namespace NeckAccessory.PickleSteps
             Pawn pawn = PawnNamed(ctx, name);
             var thoughts = new List<Thought>();
             pawn.needs.mood.thoughts.GetAllMoodThoughts(thoughts);
+            thoughts.RemoveAll(t => ThoughtUtility.ThoughtNullified(pawn, t.def));
             ctx.Assert(!thoughts.Any(t => t.def.defName == thoughtName),
                 $"{name} feels {thoughtName}; mood thoughts: " + string.Join(", ", thoughts.Select(t => t.def.defName + "@" + t.CurStageIndex)));
         }
