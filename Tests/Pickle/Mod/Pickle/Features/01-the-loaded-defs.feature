@@ -1,6 +1,6 @@
 # What only a running game can say about the defs of Neck Accessory Renew.
 #
-# The offline suite (_tools/Test-Mod.ps1) proves the XML on its own: every extension class named in a
+# The offline suite (Tests/Test-Mod.ps1) proves the XML on its own: every extension class named in a
 # def exists in the assembly, every hediff a piece names exists, the qualities line up with the sun
 # lights. What it cannot see is the game as it loaded: the vanilla Disfigured thought after this mod's
 # patch AND every other active mod's, and the pieces as ThingDefs the engine accepted.

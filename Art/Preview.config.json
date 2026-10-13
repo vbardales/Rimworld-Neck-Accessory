@@ -1,0 +1,53 @@
+{
+  "title": "Neck Accessory Renew (unofficial)",
+  "titleSize": 42,
+  "titleParts": [
+    { "text": "Neck Accessory" }
+  ],
+  "suffix": "Renew",
+  "tag": "(unofficial)",
+  "tagInline": true,
+  "copyLines": [
+    "Eight neck accessories.",
+    "A layer of their own."
+  ],
+  "layout": "panel",
+  "panelAnchor": "top-left",
+  "backgroundFile": "Preview-source.png",
+  "backgroundPosition": "center",
+  "backgroundSize": "cover",
+  "echo": {
+    "file": "echo.png",
+    "preSized": true,
+    "mode": "alpha",
+    "color": "var(--accent)",
+    "width": 190,
+    "height": 165,
+    "opacity": 1,
+    "veil": false,
+    "panelTop": 38,
+    "panelRight": 1,
+    "panelWidth": 32,
+    "flipX": true
+  },
+  "iconBadge": {
+    "file": "ModIcon-source.png",
+    "corner": "bottom-left",
+    "width": 180,
+    "translate": "12%, -12%",
+    "rotate": 15,
+    "radius": 48,
+    "outline": false,
+    "veil": "radial",
+    "veilSize": 250,
+    "veilLeft": -45,
+    "veilBottom": -45
+  },
+  "palette": {
+    "veil": "#2C1718",
+    "inkPrimary": "#F5EFE6",
+    "inkSecondary": "#D2A64F",
+    "accent": "#E47A27",
+    "badgeInk": "#17120E"
+  }
+}

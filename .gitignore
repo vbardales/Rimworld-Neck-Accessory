@@ -1,6 +1,5 @@
-.build/
-Source/**/obj/
-Source/**/bin/
+**/obj/
+**/bin/
 .vs/
 .idea/
 *.user
@@ -14,3 +13,4 @@ Tests/Pickle/results/
 evidence/
 desktop.ini
 Art/*.ico
+Art/.render/

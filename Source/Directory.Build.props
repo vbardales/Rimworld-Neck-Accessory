@@ -1,7 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <!-- Keep build intermediates inside the repository and outside distributed Mod/. -->
-    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\.build\obj\NeckAccessory\</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(MSBuildThisFileDirectory)..\.build\bin\NeckAccessory\</BaseOutputPath>
-  </PropertyGroup>
-</Project>
