@@ -228,7 +228,7 @@ Check 'images: Preview under 1 MB, 16:9; ModIcon 128 px' {
     if ((Png-Size (Join-Path $mod 'About\ModIcon.png')) -ne '128 x 128') { 'ModIcon.png is not 128 x 128' }
 }
 Check 'the gallery starts with a byte-for-byte copy of the Preview (Art/Gallery/0-preview.png)' {
-    $g = Join-Path $root 'Art\Workshop\00-preview.png'
+    $g = Join-Path $root 'Art\Gallery\0-preview.png'
     if (-not (Test-Path $g)) { 'Art/Gallery/0-preview.png is missing'; return }
     if ((Get-FileHash $g).Hash -ne (Get-FileHash (Join-Path $mod 'About\Preview.png')).Hash) { '0-preview.png differs from Mod/About/Preview.png: recopy it' }
 }
