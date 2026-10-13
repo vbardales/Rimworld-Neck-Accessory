@@ -8,7 +8,7 @@ repo:         Rimworld-Neck-Accessory
 remote:       https://github.com/vbardales/Rimworld-Neck-Accessory.git
 visibility:   public
 detached:     yes
-workflow_stage: makeSources
+workflow_stage: writeTests[1.0.0]
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -19,7 +19,6 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - "2026-10-13: defect: Art/Preview-source.png mean value (Vmean) is 0.272, under the 0.30 floor of AUDIT.md 2.e; the source is the owner's, a session does not touch it (owner decision: re-supply a lighter source, or accept)"
   - unverified: French review by Virginie (FRENCH_REVIEW.md, revision named there)
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
@@ -30,19 +29,19 @@ remaining:
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-13, audit
-protocols_read_sha: 1c29185197559138361bf6c58c9f41594c3f1a47
+protocols_read_sha: 65e09838c8023b798d4ba0ff04df04284a96f11e
 ---
 
 ## Audit — 2026-10-13
 
-Previous state: `l10n` (old vocabulary, stage `done`). Retained: `workflow_stage: makeSources`. Revision audited: `477dbb5`
+Previous state: `l10n` (old vocabulary, stage `done`). Retained after the owner's decisions of the same day: `workflow_stage: writeTests[1.0.0]` (first written as `makeSources`, see the waiver below). Revision audited: `477dbb5`
 plus the local changes committed with this audit. The chain is replayed against the current protocols (AUDIT.md section 16);
 independent validations of later states are kept and listed. No game was launched.
 
 | Transition | Result |
 | --- | --- |
 | setupRepo -> makeSources | Passed: standalone repository `vbardales/Rimworld-Neck-Accessory` (public), README, ATTRIBUTION, LICENSE, CHANGELOG, `remote` field added, `(unofficial)` suffix and UNOFFICIAL paragraph present, `upstream_mod_remotes: N/A`. Upstream permission not rechecked live. |
-| makeSources -> code | **Blocked.** 2.a: `Art/ModIcon-source.png` (the mascot) and `Art/Preview-source.png` are present. 2.b/2.c: `Mod/About/ModIcon.png` was stale (necklace-only, 14.9 KB); regenerated from the source on 2026-10-13 at the owner's request (128x128, 22,824 bytes, looked at), `modIconSource` added to `Art/Preview.config.json`. 2.e: `Measure-Palette.sh` on the source gives 1 hue family but Vmean 0.272 (< 0.30). The object is identifiable, no readable face, nothing standing upright (looked at). 2.d: no `PROMPT_*.md`. 2.f: `Art/echo-preview.png` renamed `echo-source.png` and the config points at it (the config named a missing `echo.png`); `Art/ModIcon-before-mascot.png` deleted once the icon was regenerated. |
+| makeSources -> code | **Passed after two owner decisions on 2026-10-13** (first found blocked). 2.a: `Art/ModIcon-source.png` (the mascot) and `Art/Preview-source.png` are present. 2.b/2.c: `Mod/About/ModIcon.png` was stale (necklace-only, 14.9 KB); regenerated from the source on 2026-10-13 at the owner's request (128x128, 22,824 bytes, looked at), `modIconSource` added to `Art/Preview.config.json`. 2.e: `Measure-Palette.sh` on the source gives 1 hue family but Vmean 0.272 (< 0.30). The object is identifiable, no readable face, nothing standing upright (looked at). 2.d: no `PROMPT_*.md`. 2.f: the config named a missing `echo.png`: it now points at `Art/echo-preview.png`, the pre-gallery echo name of STYLE_RIMWORLD.md (it becomes `echo-source.png` at `mountPreview`); `Art/ModIcon-before-mascot.png` deleted once the icon was regenerated. |
 | code -> declareDependencies | Passed: `Build-Mod.ps1 -Check` 0 warnings, 0 errors, `Mod/Assemblies/NeckAccessory.dll` and the Pickle steps DLL SAME as the sources. `CHANGELOG.md` heading is now `## [Unreleased]`, with a `[0.1.0] - 2026-10-01` entry (the item `3811292051` exists, `PublishedFileId.txt` is committed). No `feature` left in `remaining`. |
 | declareDependencies -> settings | Passed on the 2026-09-13 audit, re-checked today: no Harmony, no mod reference in `Source/`, `Mod/Defs`, `Mod/Patches`; `About.xml` has no `modDependencies`, `loadAfter` lists vanilla and the DLCs, no `LoadFolders.xml`. |
 | settings -> localize | Passed: `settings_audit: not_applicable`; today's search of `Source/`, `Mod/Defs`, `Mod/Patches` finds no ModSettings, SettingsCategory or MainButton, so no empty page and no shortcut. |
@@ -57,7 +56,9 @@ the `<author>` line uses `Udon - 1.6 adapted by Nelim`; the Preview was re-rende
 535,556 bytes, looked at) with its `Art/Gallery/0-preview.png` copy. The older "decision" paragraphs below stay as history and are
 replaced by this one. `tested_1_7` is absent (not a defect).
 
-Next work for the next transition only: the owner decides the `defect` line above (the Preview source brightness).
+**Waiver, 2026-10-13 (owner, in the chat):** the owner accepts `Art/Preview-source.png` at Vmean 0.272 (floor 0.30), the object being identifiable at 268 px; the source is not touched. The icon was regenerated from `Art/ModIcon-source.png` the same day.
+
+Next work for the next transition only: Virginie reviews the French (`FRENCH_REVIEW.md`, 7.g), then the Pickle suite is played in `playTests`.
 
 ## Audit — 2026-09-29
 

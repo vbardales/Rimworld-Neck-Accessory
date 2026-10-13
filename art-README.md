@@ -1,6 +1,6 @@
 # Artwork
 
-The reproducible Preview sources are `Art/Preview-source.png`, `Art/echo-source.png`,
+The reproducible Preview sources are `Art/Preview-source.png`, `Art/echo-preview.png` (`echo-source.png` once the gallery exists),
 `Art/ModIcon-source.png`, and `Art/Preview.config.json`. From the repository root, run:
 
 ```text
