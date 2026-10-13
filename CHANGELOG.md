@@ -4,7 +4,7 @@ Format inspired by [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This file serves the repository and the writing of Steam patch notes; RimWorld does not display it
 in game.
 
-## [1.0.0] — unreleased
+## [Unreleased]
 
 On release: create the `v1.0.0` tag and the matching GitHub release.
 
@@ -83,3 +83,7 @@ only stiff shoulders move at a noticeable rate.
 - Replace the old-name sprite preview with a tailoring-workshop scene and current title.
 - Verify the 896x504 PNG is below 1 MB and readable at thumbnail size.
 - Recheck and retain the preferred 128x128 ModIcon.
+
+## [0.1.0] - 2026-10-01
+
+Creation of a publishIdFile. The Workshop item was created (private) so that `Mod/About/PublishedFileId.txt` exists; the content sent was `Mod/` as it stood at that commit, nothing more.

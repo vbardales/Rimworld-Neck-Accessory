@@ -5,10 +5,10 @@ translation_fr: partial
 mod:          Neck Accessory Renew (unofficial)
 packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
+remote:       https://github.com/vbardales/Rimworld-Neck-Accessory.git
 visibility:   public
 detached:     yes
-stage:        done
-workflow_stage: l10n
+workflow_stage: makeSources
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -17,17 +17,48 @@ upstream_mod_remotes:
 dependencies: none
 showcase:     partial
 tested_on:
-workshop:
+workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
+  - "2026-10-13: defect: Art/Preview-source.png mean value (Vmean) is 0.272, under the 0.30 floor of AUDIT.md 2.e; the source is the owner's, a session does not touch it (owner decision: re-supply a lighter source, or accept)"
+  - "2026-10-13: defect: Mod/About/ModIcon.png is the necklace-only icon (14.9 KB, identical to Art/ModIcon-before-mascot.png), older than Art/ModIcon-source.png (the mascot, 2026-10-04) and under the 20-30 KB range; the Preview badge already shows the mascot (owner decision: regenerate the icon from the source, or keep the necklace)"
   - unverified: French review by Virginie (FRENCH_REVIEW.md, revision named there)
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
   - unverified: which stage the hero scarf gives the Disfigured thought (no scenario, see TESTING.md)
   - unverified: in-game EN/FR UI, logs, new game and existing save
   - unverified: current upstream permission and supported-version evidence (Steam page 1611488293 not rechecked)
+  - unverified: Check-Translations WARN, ThoughtDef/Disfigured.stages.proof_of_hero.label has a French injection outside the text inventory (a stage added by a patch); the earlier audit found the path valid
+  - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-09-29, tests written
+updated:      2026-10-13, audit
+protocols_read_sha: 1c29185197559138361bf6c58c9f41594c3f1a47
 ---
+
+## Audit — 2026-10-13
+
+Previous state: `l10n` (old vocabulary, stage `done`). Retained: `workflow_stage: makeSources`. Revision audited: `477dbb5`
+plus the local changes committed with this audit. The chain is replayed against the current protocols (AUDIT.md section 16);
+independent validations of later states are kept and listed. No game was launched.
+
+| Transition | Result |
+| --- | --- |
+| setupRepo -> makeSources | Passed: standalone repository `vbardales/Rimworld-Neck-Accessory` (public), README, ATTRIBUTION, LICENSE, CHANGELOG, `remote` field added, `(unofficial)` suffix and UNOFFICIAL paragraph present, `upstream_mod_remotes: N/A`. Upstream permission not rechecked live. |
+| makeSources -> code | **Blocked.** 2.a: `Art/ModIcon-source.png` (the mascot) and `Art/Preview-source.png` are present. 2.b/2.c: `Mod/About/ModIcon.png` is stale (still the necklace-only icon, 14.9 KB, outside 20-30 KB), see `remaining`. 2.e: `Measure-Palette.sh` on the source gives 1 hue family but Vmean 0.272 (< 0.30). The object is identifiable, no readable face, nothing standing upright (looked at). 2.d: no `PROMPT_*.md`. 2.f: `Art/echo-preview.png` renamed `echo-source.png` and the config points at it (the config named a missing `echo.png`); `ModIcon-before-mascot.png` kept until the icon decision. |
+| code -> declareDependencies | Passed: `Build-Mod.ps1 -Check` 0 warnings, 0 errors, `Mod/Assemblies/NeckAccessory.dll` and the Pickle steps DLL SAME as the sources. `CHANGELOG.md` heading is now `## [Unreleased]`, with a `[0.1.0] - 2026-10-01` entry (the item `3811292051` exists, `PublishedFileId.txt` is committed). No `feature` left in `remaining`. |
+| declareDependencies -> settings | Passed on the 2026-09-13 audit, re-checked today: no Harmony, no mod reference in `Source/`, `Mod/Defs`, `Mod/Patches`; `About.xml` has no `modDependencies`, `loadAfter` lists vanilla and the DLCs, no `LoadFolders.xml`. |
+| settings -> localize | Passed: `settings_audit: not_applicable`; today's search of `Source/`, `Mod/Defs`, `Mod/Patches` finds no ModSettings, SettingsCategory or MainButton, so no empty page and no shortcut. |
+| localize -> writeTests | Passed: `Check-DefInjected.ps1` 148 keys, 0 errors; `Check-Translations.ps1` PASS, 59 source texts, with one WARN (see `remaining`). No text or Def changed since `4796eae`, so the 2026-09-30 reading for gender agreement and `FRENCH_REVIEW.md` still describe the shipped French; that reading was not redone today. |
+| writeTests -> playTests | Blocked by 7.g: `translation_fr` is `partial` until Virginie reviews the French. Otherwise: `Tests/Test-Mod.ps1` rerun, 25 passed, 0 failed (it moved from `_tools/`); scenarios and the pass matrix are in `TESTING.md` (not named `TEST_SCENARIOS.md`); the Pickle suite is written, not played; the `LOCAL_SCRIPTS.md` row follows the move. |
+| later states | Not reached. |
+
+Changes made by this audit: the mod root is clean (`_tools/` moved to `Tests/`, the generator copy replaced by the shared
+`scripts/Make-FrenchReview.ps1`, `build/` back as the build folder through `Directory.Build.props`, `Art/Preview-original.png`
+and the gallery duplicate `00-preview.png` deleted); `Mod/About/About.xml` no longer names a RimWorld version in its description and
+the `<author>` line uses `Udon - 1.6 adapted by Nelim`; the Preview was re-rendered (`node ../scripts/Render-Preview.cjs`, 896x504,
+535,556 bytes, looked at) with its `Art/Gallery/0-preview.png` copy. The older "decision" paragraphs below stay as history and are
+replaced by this one. `tested_1_7` is absent (not a defect).
+
+Next work for the next transition only: the owner decides the two `defect` lines above (the Preview source brightness, the icon).
 
 ## Audit — 2026-09-29
 
