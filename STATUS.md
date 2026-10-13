@@ -20,7 +20,6 @@ tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
   - "2026-10-13: defect: Art/Preview-source.png mean value (Vmean) is 0.272, under the 0.30 floor of AUDIT.md 2.e; the source is the owner's, a session does not touch it (owner decision: re-supply a lighter source, or accept)"
-  - "2026-10-13: defect: Mod/About/ModIcon.png is the necklace-only icon (14.9 KB, identical to Art/ModIcon-before-mascot.png), older than Art/ModIcon-source.png (the mascot, 2026-10-04) and under the 20-30 KB range; the Preview badge already shows the mascot (owner decision: regenerate the icon from the source, or keep the necklace)"
   - unverified: French review by Virginie (FRENCH_REVIEW.md, revision named there)
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
@@ -43,7 +42,7 @@ independent validations of later states are kept and listed. No game was launche
 | Transition | Result |
 | --- | --- |
 | setupRepo -> makeSources | Passed: standalone repository `vbardales/Rimworld-Neck-Accessory` (public), README, ATTRIBUTION, LICENSE, CHANGELOG, `remote` field added, `(unofficial)` suffix and UNOFFICIAL paragraph present, `upstream_mod_remotes: N/A`. Upstream permission not rechecked live. |
-| makeSources -> code | **Blocked.** 2.a: `Art/ModIcon-source.png` (the mascot) and `Art/Preview-source.png` are present. 2.b/2.c: `Mod/About/ModIcon.png` is stale (still the necklace-only icon, 14.9 KB, outside 20-30 KB), see `remaining`. 2.e: `Measure-Palette.sh` on the source gives 1 hue family but Vmean 0.272 (< 0.30). The object is identifiable, no readable face, nothing standing upright (looked at). 2.d: no `PROMPT_*.md`. 2.f: `Art/echo-preview.png` renamed `echo-source.png` and the config points at it (the config named a missing `echo.png`); `ModIcon-before-mascot.png` kept until the icon decision. |
+| makeSources -> code | **Blocked.** 2.a: `Art/ModIcon-source.png` (the mascot) and `Art/Preview-source.png` are present. 2.b/2.c: `Mod/About/ModIcon.png` was stale (necklace-only, 14.9 KB); regenerated from the source on 2026-10-13 at the owner's request (128x128, 22,824 bytes, looked at), `modIconSource` added to `Art/Preview.config.json`. 2.e: `Measure-Palette.sh` on the source gives 1 hue family but Vmean 0.272 (< 0.30). The object is identifiable, no readable face, nothing standing upright (looked at). 2.d: no `PROMPT_*.md`. 2.f: `Art/echo-preview.png` renamed `echo-source.png` and the config points at it (the config named a missing `echo.png`); `Art/ModIcon-before-mascot.png` deleted once the icon was regenerated. |
 | code -> declareDependencies | Passed: `Build-Mod.ps1 -Check` 0 warnings, 0 errors, `Mod/Assemblies/NeckAccessory.dll` and the Pickle steps DLL SAME as the sources. `CHANGELOG.md` heading is now `## [Unreleased]`, with a `[0.1.0] - 2026-10-01` entry (the item `3811292051` exists, `PublishedFileId.txt` is committed). No `feature` left in `remaining`. |
 | declareDependencies -> settings | Passed on the 2026-09-13 audit, re-checked today: no Harmony, no mod reference in `Source/`, `Mod/Defs`, `Mod/Patches`; `About.xml` has no `modDependencies`, `loadAfter` lists vanilla and the DLCs, no `LoadFolders.xml`. |
 | settings -> localize | Passed: `settings_audit: not_applicable`; today's search of `Source/`, `Mod/Defs`, `Mod/Patches` finds no ModSettings, SettingsCategory or MainButton, so no empty page and no shortcut. |
@@ -58,7 +57,7 @@ the `<author>` line uses `Udon - 1.6 adapted by Nelim`; the Preview was re-rende
 535,556 bytes, looked at) with its `Art/Gallery/0-preview.png` copy. The older "decision" paragraphs below stay as history and are
 replaced by this one. `tested_1_7` is absent (not a defect).
 
-Next work for the next transition only: the owner decides the two `defect` lines above (the Preview source brightness, the icon).
+Next work for the next transition only: the owner decides the `defect` line above (the Preview source brightness).
 
 ## Audit — 2026-09-29
 
