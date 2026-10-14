@@ -1,0 +1,13 @@
+# Pass "sexualite": the minimal set, plus the mods that give pawns sexuality traits or genes. The rose and
+# lily necklaces read and write TraitDefOf.Gay, so these are the mods most likely to meet that trait.
+#
+# Mlie.SexualityTraits        3297325000  Sexuality Traits (Continued)
+# RforReload.EdgesOfAcceptence 3165242067 Edges of Acceptance (Homophobic and Heterophobic traits)
+# Mlie.SYRIndividuality       3253596705  [SYR] Individuality (Continued)
+# blueleafy.sexualities       2895151374  Sexuality Genes (needs Biotech, in every pass already)
+#
+# None of them is a dependency of this mod and none is declared in loadAfter. Harmony is in every pass.
+Mlie.SexualityTraits   3297325000
+RforReload.EdgesOfAcceptence   3165242067
+Mlie.SYRIndividuality   3253596705
+blueleafy.sexualities   2895151374

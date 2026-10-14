@@ -47,17 +47,29 @@ switch is the game's, not the mod's.
 
 ## Passes
 
-`../AUDIT.md` asks for three families. This mod needs **two runs and neither of the other families applies**:
+`../AUDIT.md` asks for three families. This mod needs **five runs**: two without optional mods and three
+with the sexuality mods the rose and lily necklaces may meet (owner request, 2026-10-14; the necklaces read
+and write `TraitDefOf.Gay`).
 
 | Pass | Command | What it proves |
 | --- | --- | --- |
-| minimal, English | `scripts/Run-PickleWsl.ps1 -Mod NeckAccessoryRenew` (through `Submit-PickleRun.ps1`) | the whole suite against Core, the DLC, Harmony, RimLogging, Pickle and this mod; the only set the mod loads in |
+| minimal, English | `scripts/Run-PickleWsl.ps1 -Mod NeckAccessoryRenew` (through `Submit-PickleRun.ps1`) | the whole suite against Core, the DLC, Harmony, RimLogging, Pickle and this mod |
 | minimal, French | the same with `-Language French` | the same features under a French game: no step spells a label, so the features are unchanged |
+| `sexualite`, English | `-DepMap wsl-deps.sexualite.map` | the suite with Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued) and Sexuality Genes loaded: the trait is still granted and taken back |
+| `split-attraction`, English | `-DepMap wsl-deps.split-attraction.map` | the same plus Split Attraction, which may redefine what the Gay trait does |
+| `rimpsyche`, English | `-DepMap wsl-deps.rimpsyche.map` | the suite with Rimpsyche - Sexuality and its core only: it declares Sexuality Traits and others incompatible, so it cannot share a set with them |
 
-**No pass with optional mods.** `About.xml` has no `modDependencies` and its `loadAfter` names Core and the
-DLC only: there is no optional mod to add. **The day `loadAfter` names another mod, this table is wrong.**
-**No incompatibility pass:** nothing in the README, CHANGELOG or description claims a conflict. **No
-DLC-absent pass:** the mod guards nothing behind a DLC; its `loadAfter` on the five DLC is ordering only.
+**Why three sets and not one.** Rimpsyche - Sexuality lists `Mlie.SexualityTraits` and several sexuality
+mods as incompatible: its pass is exclusive with the others. Split Attraction has its own pass so that a red
+is attributed to it. Rational Romance, Way Better Romance, the culture and gene mods and No Sexual
+Orientation Traits were left out on 2026-10-14 (they touch romance or frequency, not the trait the necklaces
+write); a red above widens the test to the mod concerned. **The optional passes play the whole suite in
+English**; narrow them with a filter to the rose, lily and thought scenarios if the queue is too long.
+
+None of these mods is a dependency: `About.xml` has no `modDependencies` and its `loadAfter` names Core and
+the DLC only. The maps are not in `loadAfter` and the mod guards nothing for them. **No incompatibility pass:**
+nothing in the README, CHANGELOG or description claims a conflict. **No DLC-absent pass:** the mod guards
+nothing behind a DLC; its `loadAfter` on the five DLC is ordering only.
 
 ## Manual tests
 
