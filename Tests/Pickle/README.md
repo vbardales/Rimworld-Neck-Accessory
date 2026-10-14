@@ -8,7 +8,7 @@ Scope, pass matrix and what is deliberately not covered: `../../TESTING.md`.
 | File | Scenarios | What |
 | --- | --- | --- |
 | `01-the-loaded-defs.feature` | 1 + 8 (outline) | the Disfigured thought as the loaded game holds it; every piece is a def |
-| `02-the-effects.feature` | 7 | armour, swindler's, rose (man, woman), lily, sun, scarf; each with a control |
+| `02-the-effects.feature` | 8 | armour, swindler's, rose (man, woman earns then loses the trait, woman keeps an innate one), lily, sun, scarf; each with a control |
 | `03-the-thoughts.feature` | 6 | choker (two traits), sun necklace (two stages), rose, lily, two scarves |
 
 Steps: `Source/NeckAccessorySteps.cs`, every text starts with `Neck Accessory:`. It references no assembly of the

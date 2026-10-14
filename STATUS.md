@@ -24,7 +24,7 @@ remaining:
   - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
   - unverified: English defects left as shipped, not corrected (a day light, humilious, This collar is so excited!): a public port with no upstream repository and no explicit licence, no local fix or pull request
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
-  - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
+  - unverified: the Pickle suite (Tests/Pickle, 16 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
   - unverified: which stage the hero scarf gives the Disfigured thought (no scenario, see TESTING.md)
   - unverified: in-game EN/FR UI, logs, new game and existing save
   - unverified: current upstream permission and supported-version evidence (Steam page 1611488293 not rechecked)

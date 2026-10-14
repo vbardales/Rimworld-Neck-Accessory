@@ -12,8 +12,22 @@ namespace NeckAccessory
     {
         private static List<int> intervalsCached;
 
+        // Pawns to whom a necklace gave the Gay trait. Only those lose it again when the
+        // affinity unwinds: a trait the pawn had before the mod is never taken away.
+        private HashSet<int> grantedGay = new HashSet<int>();
+
         public NeckAccessoryMapComponent(Map map) : base(map)
         {
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref grantedGay, "grantedGay", LookMode.Value);
+            if (grantedGay == null)
+            {
+                grantedGay = new HashSet<int>();
+            }
         }
 
         // Every distinct interval our apparel asks for. Walking the pawn list is
@@ -175,7 +189,7 @@ namespace NeckAccessory
             }
         }
 
-        private static void Affinity(Pawn wearer, AffinityExtension ext)
+        private void Affinity(Pawn wearer, AffinityExtension ext)
         {
             if (ext.affinityHediff == null || wearer.story?.traits == null)
             {
@@ -198,13 +212,14 @@ namespace NeckAccessory
                 if (hediff.Severity >= 1f && !wearer.story.traits.HasTrait(TraitDefOf.Gay))
                 {
                     wearer.story.traits.GainTrait(new Trait(TraitDefOf.Gay, PawnGenerator.RandomTraitDegree(TraitDefOf.Gay)));
+                    grantedGay.Add(wearer.thingIDNumber);
                 }
 
                 return;
             }
 
-            // Worn by the other gender it unwinds instead, and takes the trait
-            // back with it once there is nothing left.
+            // Worn by the other gender it unwinds instead, and takes back the trait it
+            // gave (never one the pawn already had) once there is nothing left.
             if (hediff == null)
             {
                 return;
@@ -212,6 +227,11 @@ namespace NeckAccessory
 
             hediff.Severity = Mathf.Max(hediff.Severity - ext.severityStep, 0f);
             if (hediff.Severity > 0f)
+            {
+                return;
+            }
+
+            if (!grantedGay.Remove(wearer.thingIDNumber))
             {
                 return;
             }

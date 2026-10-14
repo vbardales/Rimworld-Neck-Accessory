@@ -53,8 +53,27 @@ Feature: the pieces do what they promise
     And Neck Accessory: "Wearer" has the trait "Gay"
     And no errors were logged
 
-  # Worn by the other sex it unwinds, and takes the trait back with it.
-  Scenario: a woman in the rose necklace unwinds the affinity and loses the trait
+  # Worn by the other sex it unwinds, and takes back the trait the necklace itself gave. The wearer is a
+  # man long enough for the necklace to settle the trait, then becomes a woman; the affinity is set low so
+  # that one interval finishes the unwinding.
+  Scenario: a woman in the rose necklace unwinds the affinity and loses the trait the necklace gave
+    Given a colonist "Wearer" exists
+    And "Wearer" gender is male
+    And I draft "Wearer"
+    And Neck Accessory: "Wearer" is stripped of the trait "Gay"
+    And Neck Accessory: "Wearer" is given the hediff "InvitationForForbiddance" at severity 0.97
+    And Neck Accessory: "Wearer" wears "HDA_RoseNecklace" of quality "Normal"
+    When Neck Accessory: I let 1100 ticks pass
+    Then Neck Accessory: "Wearer" has the trait "Gay"
+    Given "Wearer" gender is female
+    And Neck Accessory: "Wearer" is given the hediff "InvitationForForbiddance" at severity 0.03
+    When Neck Accessory: I let 1100 ticks pass
+    Then Neck Accessory: the hediff "InvitationForForbiddance" of "Wearer" has a severity of at most 0
+    And Neck Accessory: "Wearer" does not have the trait "Gay"
+    And no errors were logged
+
+  # The control: a trait the pawn had before the mod is not the necklace's to take back.
+  Scenario: a woman in the rose necklace unwinds the affinity and keeps a trait she already had
     Given a colonist "Wearer" exists
     And "Wearer" gender is female
     And I draft "Wearer"
@@ -63,7 +82,7 @@ Feature: the pieces do what they promise
     And Neck Accessory: "Wearer" wears "HDA_RoseNecklace" of quality "Normal"
     When Neck Accessory: I let 1100 ticks pass
     Then Neck Accessory: the hediff "InvitationForForbiddance" of "Wearer" has a severity of at most 0
-    And Neck Accessory: "Wearer" does not have the trait "Gay"
+    And Neck Accessory: "Wearer" has the trait "Gay"
     And no errors were logged
 
   Scenario: a woman in the lily necklace builds the affinity and settles it as a trait

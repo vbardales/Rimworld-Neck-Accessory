@@ -28,10 +28,11 @@ has a control that must not change.
 | Heavy neck armour stiffens the shoulders | `02` scenario 1 | a colonist who wears nothing stays at 0 |
 | Swindler's necklace eases stiff shoulders | `02` scenario 2 | Awful work (factor 0) leaves 0.5 unchanged |
 | Rose necklace: affinity and trait, worn by a man | `02` scenario 3 | the trait is stripped first, so a pre-existing one cannot pass it |
-| Rose necklace worn by a woman unwinds it | `02` scenario 4 | the trait is given first |
-| Lily necklace, mirror of the rose | `02` scenario 5 | |
-| Sun necklace lights the wearer's cell and leaves nothing behind | `02` scenario 6 | after it comes off, no light remains |
-| Hero's scarf heartens allies in 15 tiles | `02` scenario 7 | one ally 42 cells away and the wearer itself get nothing |
+| Rose necklace worn by a woman unwinds it and takes back the trait it gave | `02` scenario 4 | the wearer first earns the trait from the necklace as a man |
+| A trait the pawn already had survives the unwinding | `02` scenario 5 | the trait is given, not earned |
+| Lily necklace, mirror of the rose | `02` scenario 6 | |
+| Sun necklace lights the wearer's cell and leaves nothing behind | `02` scenario 7 | after it comes off, no light remains |
+| Hero's scarf heartens allies in 15 tiles | `02` scenario 8 | one ally 42 cells away and the wearer itself get nothing |
 | Masochist's choker, sun necklace, rose and lily necklaces, two scarves | `03` | the opposite trait or sex reads the other stage |
 | Vanilla Disfigured carries the patch's worker and stage | `01` | offline suite proves the patch on synthetic defs |
 | Every piece is a def of the loaded game | `01` outline | |
