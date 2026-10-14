@@ -303,6 +303,12 @@ namespace NeckAccessory
                     continue;
                 }
 
+                // Allies only: HostileTo is false for neutral factions, guests and animals too.
+                if (!ext.targetsEnemies && target.Faction != wearer.Faction)
+                {
+                    continue;
+                }
+
                 if ((target.Position - wearer.Position).LengthHorizontalSquared > rangeSquared)
                 {
                     continue;
