@@ -19,7 +19,8 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - "2026-10-14: defect (code review, open by design): the necklaces' unwind removes the Gay trait even when it was innate (NeckAccessoryMapComponent.Affinity); Pickle scenarios 4 and 5 expect that removal, so a fix needs an owner decision"
+  - "2026-10-14: unverified: the five Pickle passes (minimal English and French, then sexualite, split-attraction, rimpsyche in English, filtered to the rose, lily and thought scenarios) are queued, none played; the optional-mod passes have no result yet"
+  - "2026-10-14: feature: every optional mod actually played (Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued), Sexuality Genes, Split Attraction, Rimpsyche - Sexuality and its core) must be thanked in the Steam description and covered by a WORKSHOP_COMMENTS.md entry at writeDocs"
   - "2026-10-14: unverified (code review): GainTrait(Gay) has no conflict check with other sexuality traits; Shine spawns the sun light with WipeMode.Vanish on the wearer's cell, which may wipe furniture there (check in game)"
   - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
   - unverified: English defects left as shipped, not corrected (a day light, humilious, This collar is so excited!): a public port with no upstream repository and no explicit licence, no local fix or pull request
@@ -34,6 +35,10 @@ session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-14, French validated, playTests
 protocols_read_sha: 1eba2baf4d52f146b4fe4f01d90bdd9f0988979e
 ---
+
+## Passes and trait fix - 2026-10-14
+
+Owner decisions in the chat. The necklaces now take back the Gay trait only when they gave it (`538da7a`: pawn ids kept in `NeckAccessoryMapComponent`, saved with the game; a pawn who already had the trait keeps it). Scenario 4 of `02` earns the trait as a man then unwinds it as a woman; a new scenario 5 is the control (an innate trait survives). Three optional passes were added (`Tests/Pickle/wsl-deps.sexualite.map`, `split-attraction`, `rimpsyche`; `TESTING.md`, "Passes"), exclusive where the mods declare themselves incompatible. Tickets: initial English `20261014-100025-201-4468`, initial French `20261014-100025-724-8e59`, and `20261014-165256-901-d07c` (sexualite), `20261014-165257-989-4055` (split-attraction), `20261014-165259-216-d300` (rimpsyche). They carry no sha: they stage the tree as it is when played (`130bb36` or later). The optional passes run filtered to the rose, lily and thought scenarios.
 
 ## Code review - 2026-10-14
 
