@@ -19,6 +19,9 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
+  - "2026-10-14: defect (code review, open by design): the necklaces' unwind removes the Gay trait even when it was innate (NeckAccessoryMapComponent.Affinity); Pickle scenarios 4 and 5 expect that removal, so a fix needs an owner decision"
+  - "2026-10-14: unverified (code review): GainTrait(Gay) has no conflict check with other sexuality traits; Shine spawns the sun light with WipeMode.Vanish on the wearer's cell, which may wipe furniture there (check in game)"
+  - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
   - unverified: English defects left as shipped, not corrected (a day light, humilious, This collar is so excited!): a public port with no upstream repository and no explicit licence, no local fix or pull request
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
@@ -31,6 +34,10 @@ session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-14, French validated, playTests
 protocols_read_sha: 1eba2baf4d52f146b4fe4f01d90bdd9f0988979e
 ---
+
+## Code review - 2026-10-14
+
+Review by an independent read-only agent of Source/, Mod/Defs, Mod/Patches and the language folders at bfab278 (0 blocking, 4 risks, 2 questions). Fixed at d0cd3f7: the hero aura now reaches only the wearer's faction (it hit neutral factions, guests and animals), and the Japanese override of the vanilla Disfigured stage label was removed. The other findings are in remaining. The two initial Pickle tickets were filed at bfab278 and carry no sha: they stage the tree as it stands when played, so they test d0cd3f7 (or later), not bfab278. code_review_sha is not written yet (due at shootGallery, after the Pickle passes).
 
 ## Translation audit - French review, 2026-10-14
 
