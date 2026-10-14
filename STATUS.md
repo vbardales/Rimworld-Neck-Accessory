@@ -1,14 +1,14 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: unchecked
+translation_fr: complete
 mod:          Neck Accessory Renew (unofficial)
 packageId:    nelim.neckaccessory
 repo:         Rimworld-Neck-Accessory
 remote:       https://github.com/vbardales/Rimworld-Neck-Accessory.git
 visibility:   public
 detached:     yes
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -19,7 +19,6 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - unverified: French review by Virginie of the five texts changed on 2026-10-14 (FRENCH_REVIEW.md, revision 018b2cf); she reviewed the rest at 4796eae
   - unverified: English defects left as shipped, not corrected (a day light, humilious, This collar is so excited!): a public port with no upstream repository and no explicit licence, no local fix or pull request
   - unverified: whether the sunlight objects are exposed in any game UI (mouse-over, inspect)
   - unverified: the Pickle suite (Tests/Pickle, 15 scenarios + 8-piece outline) has never been played; two passes, English and French, are the criteria of done -> tested
@@ -29,13 +28,13 @@ remaining:
   - unverified: Check-Translations WARN, ThoughtDef/Disfigured.stages.proof_of_hero.label has a French injection outside the text inventory (a stage added by a patch); the earlier audit found the path valid
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-10-14, French review
-protocols_read_sha: 65e09838c8023b798d4ba0ff04df04284a96f11e
+updated:      2026-10-14, French validated, playTests
+protocols_read_sha: 1eba2baf4d52f146b4fe4f01d90bdd9f0988979e
 ---
 
 ## Translation audit - French review, 2026-10-14
 
-Reviewer: Virginie (confirmed in the chat). Revision reviewed: `4796eae` (the French files did not change between it and the audit of 2026-10-13). Corrections requested, all applied at `018b2cf`: "héros" replaced by neutral wording in five texts (HDA_Hediff_Hero_inspirationt label, the stage "Tant qu'il reste de l'héroïsme, je ne me vois pas perdre !", HDA_Heros_scarf label and description, HeroIsOnlyOne label). The description of the inspiration hediff also said "l'écharpe du héros": it became "l'écharpe héroïque" for consistency (a sixth text she did not list). Rose and lily necklaces confirmed correct (fixed sex, not an agreement). `translation_fr` is `unchecked` until she reads the changed texts in the regenerated `FRENCH_REVIEW.md`. English defects reported, left uncorrected (see `remaining`).
+Reviewer: Virginie (confirmed in the chat). Revision reviewed: `4796eae` (the French files did not change between it and the audit of 2026-10-13). Corrections requested, all applied at `018b2cf`: "héros" replaced by neutral wording in five texts (HDA_Hediff_Hero_inspirationt label, the stage "Tant qu'il reste de l'héroïsme, je ne me vois pas perdre !", HDA_Heros_scarf label and description, HeroIsOnlyOne label). The description of the inspiration hediff also said "l'écharpe du héros": it became "l'écharpe héroïque" for consistency (a sixth text she did not list). Rose and lily necklaces confirmed correct (fixed sex, not an agreement). **Validated by Virginie in the chat on 2026-10-14** ("Je valide", revision `018b2cf`): the five reworded texts and the fixed-sex rose and lily wording; `translation_fr` is `complete`. The sixth text (inspiration description) was covered by her validation of the regenerated file. English defects reported, left uncorrected (see `remaining`).
 
 ## Audit — 2026-10-13
 
