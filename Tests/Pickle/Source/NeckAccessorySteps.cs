@@ -152,6 +152,22 @@ namespace NeckAccessory.PickleSteps
             ctx.Assert(severity >= limit, $"{hediffName} on {name} is at {severity:0.#####}, below {limit}");
         }
 
+        // "Gay" means the vanilla trait or, when Split Attraction is loaded, the one it replaces it with.
+        private static List<TraitDef> TraitGroup(PickleContext ctx, string traitName)
+        {
+            List<TraitDef> defs = new List<TraitDef> { Def<TraitDef>(ctx, traitName) };
+            if (traitName == "Gay")
+            {
+                TraitDef split = DefDatabase<TraitDef>.GetNamedSilentFail("SplitAttraction_Gay");
+                if (split != null)
+                {
+                    defs.Add(split);
+                }
+            }
+
+            return defs;
+        }
+
         [Given("Neck Accessory: {string} is given the trait {string}")]
         public void GivenTrait(PickleContext ctx, string name, string traitName)
         {
@@ -167,10 +183,13 @@ namespace NeckAccessory.PickleSteps
         public void StrippedOfTrait(PickleContext ctx, string name, string traitName)
         {
             Pawn pawn = PawnNamed(ctx, name);
-            Trait trait = pawn.story.traits.GetTrait(Def<TraitDef>(ctx, traitName));
-            if (trait != null)
+            foreach (TraitDef def in TraitGroup(ctx, traitName))
             {
-                pawn.story.traits.RemoveTrait(trait);
+                Trait trait = pawn.story.traits.GetTrait(def);
+                if (trait != null)
+                {
+                    pawn.story.traits.RemoveTrait(trait);
+                }
             }
         }
 
@@ -178,7 +197,7 @@ namespace NeckAccessory.PickleSteps
         public void HasTrait(PickleContext ctx, string name, string traitName)
         {
             Pawn pawn = PawnNamed(ctx, name);
-            ctx.Assert(pawn.story.traits.HasTrait(Def<TraitDef>(ctx, traitName)),
+            ctx.Assert(TraitGroup(ctx, traitName).Any(d => pawn.story.traits.HasTrait(d)),
                 $"{name} has no trait {traitName}; traits: " + string.Join(", ", pawn.story.traits.allTraits.Select(t => t.def.defName)));
         }
 
@@ -186,7 +205,7 @@ namespace NeckAccessory.PickleSteps
         public void HasNoTrait(PickleContext ctx, string name, string traitName)
         {
             Pawn pawn = PawnNamed(ctx, name);
-            ctx.Assert(!pawn.story.traits.HasTrait(Def<TraitDef>(ctx, traitName)),
+            ctx.Assert(!TraitGroup(ctx, traitName).Any(d => pawn.story.traits.HasTrait(d)),
                 $"{name} still has the trait {traitName}");
         }
 

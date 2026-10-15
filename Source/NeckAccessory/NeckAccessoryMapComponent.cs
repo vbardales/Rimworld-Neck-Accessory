@@ -12,6 +12,16 @@ namespace NeckAccessory
     {
         private static List<int> intervalsCached;
 
+        // Split Attraction replaces the vanilla Gay trait with its own, so a necklace that only
+        // looked for TraitDefOf.Gay would never see the trait it had just given. Optional: absent
+        // def, nothing changes.
+        private static readonly TraitDef SplitGay = DefDatabase<TraitDef>.GetNamedSilentFail("SplitAttraction_Gay");
+
+        private static Trait FindGay(Pawn pawn)
+        {
+            return pawn.story.traits.GetTrait(TraitDefOf.Gay) ?? (SplitGay != null ? pawn.story.traits.GetTrait(SplitGay) : null);
+        }
+
         // Pawns to whom a necklace gave the Gay trait. Only those lose it again when the
         // affinity unwinds: a trait the pawn had before the mod is never taken away.
         private HashSet<int> grantedGay = new HashSet<int>();
@@ -209,9 +219,10 @@ namespace NeckAccessory
                 }
 
                 hediff.Severity = Mathf.Min(hediff.Severity + ext.severityStep, 1f);
-                if (hediff.Severity >= 1f && !wearer.story.traits.HasTrait(TraitDefOf.Gay))
+                if (hediff.Severity >= 1f && FindGay(wearer) == null)
                 {
-                    wearer.story.traits.GainTrait(new Trait(TraitDefOf.Gay, PawnGenerator.RandomTraitDegree(TraitDefOf.Gay)));
+                    TraitDef gayDef = SplitGay ?? TraitDefOf.Gay;
+                    wearer.story.traits.GainTrait(new Trait(gayDef, PawnGenerator.RandomTraitDegree(gayDef)));
                     grantedGay.Add(wearer.thingIDNumber);
                 }
 
@@ -236,7 +247,7 @@ namespace NeckAccessory
                 return;
             }
 
-            Trait gay = wearer.story.traits.GetTrait(TraitDefOf.Gay);
+            Trait gay = FindGay(wearer);
             if (gay != null)
             {
                 wearer.story.traits.RemoveTrait(gay);

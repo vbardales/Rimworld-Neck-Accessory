@@ -19,8 +19,8 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
+  - "2026-10-15: unverified: Split Attraction support (owner chose to support it): the necklaces now find, grant and remove SplitAttraction_Gay too (NeckAccessoryMapComponent.FindGay); the split-attraction pass is refiled alone to confirm it goes green"
   - "2026-10-15: unverified: the initial French pass ended with no report (the launcher saw the game restart under the same lock after the language switch and cut it); retried as ticket 20261015-215739-663-3b2f"
-  - "2026-10-15: defect (found by pass split-attraction, ticket 20261014-165257-989-4055): with Split Attraction loaded the rose and lily necklaces never leave the trait Gay on the pawn (4 of 10 scenarios fail, 'Wearer has no trait Gay', the pawn carries SplitAttraction_Gay); decision for the owner: declare it incompatible, or grant SplitAttraction_Gay when that mod is active"
   - "2026-10-14: feature: every optional mod actually played (Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued), Sexuality Genes, Split Attraction, Rimpsyche - Sexuality and its core) must be thanked in the Steam description and covered by a WORKSHOP_COMMENTS.md entry at writeDocs"
   - "2026-10-14: unverified (code review): GainTrait(Gay) has no conflict check with other sexuality traits; Shine spawns the sun light with WipeMode.Vanish on the wearer's cell, which may wipe furniture there (check in game)"
   - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
