@@ -16,7 +16,7 @@ upstream_mod_remotes:
   - N/A
 dependencies: none
 showcase:     partial
-tested_on:
+tested_on:    2026-10-16
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
   - "2026-10-14: feature: every optional mod actually played (Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued), Sexuality Genes, Split Attraction, Rimpsyche - Sexuality and its core) must be thanked in the Steam description and covered by a WORKSHOP_COMMENTS.md entry at writeDocs"
@@ -50,7 +50,8 @@ Preview re-rendered from the new `Art/Preview.config.json` with `node ../scripts
 
 - Initial French retry (`Tests/Pickle/Evidence/initial-French-dc7ab9f`, set `sans-facultatifs`): 23/23 passed. Both initial passes (English and French) are green: the playTests criterion of done holds.
 - `split-attraction` refiled after the Split Attraction support (`Tests/Pickle/Evidence/split-attraction-fix-English-61097be`): 10/10 passed, the four failed scenarios now green. All three optional passes (`sexualite`, `rimpsyche`, `split-attraction`) are green.
-- Evidence folders still hold `Player.log`, `report.html`, `messages.ndjson`: to minify with `Prune-Evidence.ps1`, not yet done.
+- Tested tree: both runs were played on 2026-10-16, after the last code commit (`61097be`, 2026-10-15 22:55); only STATUS.md, Preview and docs changed since, so the green results hold for the current `Mod/` and `Source/`. Every scenario of both runs ends with "no errors were logged": the log check (8.i) rests on that. No `@wip`, no `@review`, no `@requires` in the three features.
+- Evidence pruned on 2026-10-27 (`Prune-Evidence.ps1 -Apply`): 7 superseded folders and 2 failed ones deleted, 2 kept minified with a `RELEASE.md` condition (`initial-French-dc7ab9f`, `split-attraction-fix-English-61097be`), about 36 KB in all.
 
 ## Passes and trait fix - 2026-10-14
 
