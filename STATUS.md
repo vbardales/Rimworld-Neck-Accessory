@@ -19,8 +19,6 @@ showcase:     partial
 tested_on:
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - "2026-10-15: unverified: Split Attraction support (owner chose to support it): the necklaces now find, grant and remove SplitAttraction_Gay too (NeckAccessoryMapComponent.FindGay); the split-attraction pass is refiled alone to confirm it goes green"
-  - "2026-10-15: unverified: the initial French pass ended with no report (the launcher saw the game restart under the same lock after the language switch and cut it); retried as ticket 20261015-215739-663-3b2f"
   - "2026-10-14: feature: every optional mod actually played (Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued), Sexuality Genes, Split Attraction, Rimpsyche - Sexuality and its core) must be thanked in the Steam description and covered by a WORKSHOP_COMMENTS.md entry at writeDocs"
   - "2026-10-14: unverified (code review): GainTrait(Gay) has no conflict check with other sexuality traits; Shine spawns the sun light with WipeMode.Vanish on the wearer's cell, which may wipe furniture there (check in game)"
   - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
@@ -34,7 +32,7 @@ remaining:
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-14, French validated, playTests
-protocols_read_sha: e733386f133716f60efbad53c37602935eda7050
+protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 ---
 
 ## Pickle passes - 2026-10-15
@@ -43,6 +41,12 @@ protocols_read_sha: e733386f133716f60efbad53c37602935eda7050
 - `sexualite` (`20261014-165256-901-d07c`, 130bb36, filtered, English): 10/10 passed. `rimpsyche` (`20261014-165259-216-d300`): 10/10 passed.
 - `split-attraction` (`20261014-165257-989-4055`): 6 passed, **4 failed**: the rose (man, woman, innate-trait control) and lily scenarios, `Wearer has no trait Gay; traits: ..., SplitAttraction_Gay, SplitAttraction_Heteroromantic`. Not a flaky run: the mod replaces the Gay trait with its own. See `remaining`.
 - Initial French (`20261014-100025-724-8e59`): no report, retried.
+
+### Read on 2026-10-27 (both runs dated 2026-10-16, exitReason `passed`)
+
+- Initial French retry (`Tests/Pickle/Evidence/initial-French-dc7ab9f`, set `sans-facultatifs`): 23/23 passed. Both initial passes (English and French) are green: the playTests criterion of done holds.
+- `split-attraction` refiled after the Split Attraction support (`Tests/Pickle/Evidence/split-attraction-fix-English-61097be`): 10/10 passed, the four failed scenarios now green. All three optional passes (`sexualite`, `rimpsyche`, `split-attraction`) are green.
+- Evidence folders still hold `Player.log`, `report.html`, `messages.ndjson`: to minify with `Prune-Evidence.ps1`, not yet done.
 
 ## Passes and trait fix - 2026-10-14
 
