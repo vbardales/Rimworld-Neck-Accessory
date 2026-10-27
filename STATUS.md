@@ -19,6 +19,11 @@ showcase:     partial
 tested_on:    2026-10-16
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
+  - "2026-10-27: unverified: replay of the rose and lily scenarios after the GameComponent fix (5f5c3d9), ticket 20261027-012303-669-87b8; code_review_sha is written once it is green"
+  - "2026-10-27: defect (code review, left): GainTrait of the Gay trait has no conflict check with other sexuality traits (Bisexual, Asexual, Split Attraction orientations), and the old orientation is not restored when the necklace takes the trait back"
+  - "2026-10-27: defect (code review, left): the necklace stores only the pawn id, not which Gay trait it gave: with both vanilla Gay and SplitAttraction_Gay on a pawn, FindGay may remove the wrong one"
+  - "2026-10-27: defect (code review, left): a recorded pawn id is not dropped when another mod removes the trait; pawns given the trait by a build before 538da7a are not recorded and keep it; ids of dead pawns are never purged (no effect on behaviour)"
+  - "2026-10-27: unverified (code review): no scenario saves and reloads, so ExposeData of NeckAccessoryGameComponent is not tested"
   - "2026-10-14: feature: every optional mod actually played (Sexuality Traits (Continued), Edges of Acceptance, [SYR] Individuality (Continued), Sexuality Genes, Split Attraction, Rimpsyche - Sexuality and its core) must be thanked in the Steam description and covered by a WORKSHOP_COMMENTS.md entry at writeDocs"
   - "2026-10-14: unverified (code review): GainTrait(Gay) has no conflict check with other sexuality traits; Shine spawns the sun light with WipeMode.Vanish on the wearer's cell, which may wipe furniture there (check in game)"
   - "2026-10-14: defect (code review, left): ThoughtWorker_Disfigured_ProofOfHero uses ActiveAtStage(1), wrong if another mod adds a Disfigured stage"
@@ -41,6 +46,10 @@ protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 - `sexualite` (`20261014-165256-901-d07c`, 130bb36, filtered, English): 10/10 passed. `rimpsyche` (`20261014-165259-216-d300`): 10/10 passed.
 - `split-attraction` (`20261014-165257-989-4055`): 6 passed, **4 failed**: the rose (man, woman, innate-trait control) and lily scenarios, `Wearer has no trait Gay; traits: ..., SplitAttraction_Gay, SplitAttraction_Heteroromantic`. Not a flaky run: the mod replaces the Gay trait with its own. See `remaining`.
 - Initial French (`20261014-100025-724-8e59`): no report, retried.
+
+### Code review - 2026-10-27 (8.m, range cfae258..61097be)
+
+Independent Opus read-only review: 1 high, 1 medium, 5 low, no blocking finding on Split Attraction absent, a pawn who already had the trait, or silent-passing steps. The high finding (the granted-pawn list lived in a MapComponent, lost with its map or missed on another map) is fixed at `5f5c3d9`: the list is now on `NeckAccessoryGameComponent`, built clean (0 warnings), DLL committed with it, offline suite 25/25. Owner chose to fix the high finding only (Virginie, in the chat); the others are in `remaining`. The new list is saved under the same key `grantedGay`, now at game level: a save made between 538da7a and 5f5c3d9 loses the records (no release carried it). `code_review_sha` waits for the replay.
 
 ### Preview validated - 2026-10-27
 
