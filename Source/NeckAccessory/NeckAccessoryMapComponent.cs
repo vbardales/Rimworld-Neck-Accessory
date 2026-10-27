@@ -22,23 +22,13 @@ namespace NeckAccessory
             return pawn.story.traits.GetTrait(TraitDefOf.Gay) ?? (SplitGay != null ? pawn.story.traits.GetTrait(SplitGay) : null);
         }
 
-        // Pawns to whom a necklace gave the Gay trait. Only those lose it again when the
-        // affinity unwinds: a trait the pawn had before the mod is never taken away.
-        private HashSet<int> grantedGay = new HashSet<int>();
-
         public NeckAccessoryMapComponent(Map map) : base(map)
         {
         }
 
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Collections.Look(ref grantedGay, "grantedGay", LookMode.Value);
-            if (grantedGay == null)
-            {
-                grantedGay = new HashSet<int>();
-            }
-        }
+        // The pawns a necklace gave the Gay trait to follow the pawn across maps, so they live
+        // on the game, not on this map.
+        private static HashSet<int> GrantedGay => Current.Game.GetComponent<NeckAccessoryGameComponent>().GrantedGay;
 
         // Every distinct interval our apparel asks for. Walking the pawn list is
         // only worth doing on ticks where at least one of them is due.
@@ -223,7 +213,7 @@ namespace NeckAccessory
                 {
                     TraitDef gayDef = SplitGay ?? TraitDefOf.Gay;
                     wearer.story.traits.GainTrait(new Trait(gayDef, PawnGenerator.RandomTraitDegree(gayDef)));
-                    grantedGay.Add(wearer.thingIDNumber);
+                    GrantedGay.Add(wearer.thingIDNumber);
                 }
 
                 return;
@@ -242,7 +232,7 @@ namespace NeckAccessory
                 return;
             }
 
-            if (!grantedGay.Remove(wearer.thingIDNumber))
+            if (!GrantedGay.Remove(wearer.thingIDNumber))
             {
                 return;
             }
