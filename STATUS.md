@@ -51,6 +51,10 @@ protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 
 Independent Opus read-only review: 1 high, 1 medium, 5 low, no blocking finding on Split Attraction absent, a pawn who already had the trait, or silent-passing steps. The high finding (the granted-pawn list lived in a MapComponent, lost with its map or missed on another map) is fixed at `5f5c3d9`: the list is now on `NeckAccessoryGameComponent`, built clean (0 warnings), DLL committed with it, offline suite 25/25. Owner chose to fix the high finding only (Virginie, in the chat); the others are in `remaining`. The new list is saved under the same key `grantedGay`, now at game level: a save made between 538da7a and 5f5c3d9 loses the records (no release carried it). `code_review_sha` waits for the replay.
 
+### Next steps and owner rules - 2026-10-27
+
+When ticket 20261027-012303-669-87b8 is green: write `code_review_sha` (HEAD, bare 40-character sha; only STATUS, docs and Preview changed since `5f5c3d9`), then move to `shootGallery[1.0.0]` (8.n: `Check-Status`, `Mark-ProtocolsRead`, STATUS, commit, push, rename, `STAGE` message to the TM). Virginie approved the move in the chat (2026-10-27) on condition of a clean review; she chose to fix only the high finding. At `shootGallery`: run `write-shotlist` first, then `review-gallery`. Owner rules for the gallery (2026-10-27): any missing step is asked of NPT, and on a refusal Virginie arbitrates; only the colonists of NSB (SanctuaryBacklot) are allowed, any other colonist needs her express and reasoned authorization.
+
 ### Preview validated - 2026-10-27
 
 Preview re-rendered from the new `Art/Preview.config.json` with `node ../scripts/Render-Preview.cjs bottom-left` (ModIcon badge bottom-left, 896x504, 526,2 KB, looked at). **Validated by Virginie in the chat on 2026-10-27**, revision `8ba8178`. `Art/Gallery/0-preview.png` is a byte copy. The corner is in the config (`icon.corner: bottom-left`), so a plain `node ../scripts/Render-Preview.cjs` gives the same image. The GitHub social preview is not re-uploaded (`social_preview_sha256`, due at writeDocs).
