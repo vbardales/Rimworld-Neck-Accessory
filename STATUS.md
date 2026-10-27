@@ -44,7 +44,7 @@ protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 
 ### Preview validated - 2026-10-27
 
-Preview re-rendered from the new `Art/Preview.config.json` with `node ../scripts/Render-Preview.cjs bottom-left` (ModIcon badge bottom-left, 896x504, 526,2 KB, looked at). **Validated by Virginie in the chat on 2026-10-27**, revision `8ba8178`. `Art/Gallery/0-preview.png` is a byte copy. The corner is a command-line argument, not in the config: redo the render with `bottom-left` at any later re-render. The GitHub social preview is not re-uploaded (`social_preview_sha256`, due at writeDocs).
+Preview re-rendered from the new `Art/Preview.config.json` with `node ../scripts/Render-Preview.cjs bottom-left` (ModIcon badge bottom-left, 896x504, 526,2 KB, looked at). **Validated by Virginie in the chat on 2026-10-27**, revision `8ba8178`. `Art/Gallery/0-preview.png` is a byte copy. The corner is in the config (`icon.corner: bottom-left`), so a plain `node ../scripts/Render-Preview.cjs` gives the same image. The GitHub social preview is not re-uploaded (`social_preview_sha256`, due at writeDocs).
 
 ### Read on 2026-10-27 (both runs dated 2026-10-16, exitReason `passed`)
 
