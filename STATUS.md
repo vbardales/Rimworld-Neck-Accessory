@@ -42,6 +42,10 @@ protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 - `split-attraction` (`20261014-165257-989-4055`): 6 passed, **4 failed**: the rose (man, woman, innate-trait control) and lily scenarios, `Wearer has no trait Gay; traits: ..., SplitAttraction_Gay, SplitAttraction_Heteroromantic`. Not a flaky run: the mod replaces the Gay trait with its own. See `remaining`.
 - Initial French (`20261014-100025-724-8e59`): no report, retried.
 
+### Preview validated - 2026-10-27
+
+Preview re-rendered from the new `Art/Preview.config.json` with `node ../scripts/Render-Preview.cjs bottom-left` (ModIcon badge bottom-left, 896x504, 526,2 KB, looked at). **Validated by Virginie in the chat on 2026-10-27**, revision `8ba8178`. `Art/Gallery/0-preview.png` is a byte copy. The corner is a command-line argument, not in the config: redo the render with `bottom-left` at any later re-render. The GitHub social preview is not re-uploaded (`social_preview_sha256`, due at writeDocs).
+
 ### Read on 2026-10-27 (both runs dated 2026-10-16, exitReason `passed`)
 
 - Initial French retry (`Tests/Pickle/Evidence/initial-French-dc7ab9f`, set `sans-facultatifs`): 23/23 passed. Both initial passes (English and French) are green: the playTests criterion of done holds.
