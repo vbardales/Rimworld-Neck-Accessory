@@ -10,6 +10,7 @@ Scope, pass matrix and what is deliberately not covered: `../../TESTING.md`.
 | `01-the-loaded-defs.feature` | 1 + 8 (outline) | the Disfigured thought as the loaded game holds it; every piece is a def |
 | `02-the-effects.feature` | 8 | armour, swindler's, rose (man, woman earns then loses the trait, woman keeps an innate one), lily, sun, scarf; each with a control |
 | `03-the-thoughts.feature` | 6 | choker (two traits), sun necklace (two stages), rose, lily, two scarves |
+| `04-gallery-captures.feature` | 8 | the Workshop gallery (6 scenes, 2 info-card windows), pass `wsl-deps.gallery.map`, not part of the test suites |
 
 Steps: `Source/NeckAccessorySteps.cs`, every text starts with `Neck Accessory:`. It references no assembly of the
 mod: defs are found by defName.
