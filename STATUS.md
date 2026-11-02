@@ -20,6 +20,8 @@ tested_on:    2026-11-02
 code_review_sha: d6e85bc31125a087bbe4592674e9f8729aacca6d
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
+  - "2026-11-02: ticket 20261102-192435-034-f501 queued (gallery images 1 to 3, tree ea1b474, evidence Tests/Pickle/Inbox/gallery-1-3-ea1b474): on RUN_DONE read summary.json and junit.xml, OPEN every capture (9.d), tune the cells of the feature, then file images 4 to 6 and the two windows (about 5 scenarios max per ticket); then 9.c order, 9.e table, subtitles (Art/Gallery-clean + Add-Subtitle), 9.f move to mountPreview"
+  - "2026-11-02: STATUS.md is over 40 KB (linter WARN): move the journal sections to docs/runs/ at a quiet moment"
   - "2026-10-27: defect (code review, left): GainTrait of the Gay trait has no conflict check with other sexuality traits (Bisexual, Asexual, Split Attraction orientations), and the old orientation is not restored when the necklace takes the trait back"
   - "2026-10-27: defect (code review, left): the necklace stores only the pawn id, not which Gay trait it gave: with both vanilla Gay and SplitAttraction_Gay on a pawn, FindGay may remove the wrong one"
   - "2026-10-27: defect (code review, left): a recorded pawn id is not dropped when another mod removes the trait; pawns given the trait by a build before 538da7a are not recorded and keep it; ids of dead pawns are never purged (no effect on behaviour)"
