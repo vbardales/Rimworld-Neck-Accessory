@@ -70,7 +70,7 @@ Constraint: nothing is drawn on a worn piece (README), so every scene shows the 
 
 Interface windows, no subtitle, not scored: W1 info card of `HDA_Heros_scarf` (Stats tab), W2 info card of `HDA_Masochists_Choker`, both on `window-backdrop-for-height`, cropped.
 
-Estimates (points only): 1 to 5 each 4.5 (j weak: a one-cell item is about 10 px at 268 px), 6 is 5. Weak points and risks: cells of the items and pawns not fixed (read on the empty photographs of each place before the ticket); the Soren and Nelim looks to check in `LOOKS-VALIDATION.md`; Soren's Gay trait on the Character tab of scene 3 waits for Virginie's confirmation; sun-light pool brightness at 22:00 unplayed. Feature header and `PUBLICATION.md` subtitles are written with the scenarios.
+Estimates (points only): 1 to 5 each 4.5 (j weak: a one-cell item is about 10 px at 268 px), 6 is 5. Weak points and risks: cells of the items and pawns not fixed (read on the empty photographs of each place before the ticket); the Soren and Nelim looks to check in `LOOKS-VALIDATION.md`; Soren's Gay trait on the Character tab of scene 3 confirmed by Virginie in the chat on 2026-11-02 ("ok"); sun-light pool brightness at 22:00 unplayed. Feature header and `PUBLICATION.md` subtitles are written with the scenarios.
 
 ### Next steps and owner rules - 2026-10-27
 
