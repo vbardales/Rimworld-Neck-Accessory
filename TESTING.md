@@ -5,13 +5,15 @@ Pickle run takes over a machine for tens of minutes and an offline check takes a
 
 | Layer | What runs it | What it covers |
 | --- | --- | --- |
-| Offline suite | `Tests/Test-Mod.ps1` (Windows PowerShell 5.1) | XML well-formedness; every extension, worker and thing class named by a def exists in the sources and in the compiled assembly; every field a def sets exists on its class; every hediff named exists; one sun light per quality; quality tables of 7 entries; every piece on the mod's own apparel layer; the vanilla-Disfigured patch applied to synthetic defs (vanilla shape, a shape with a stage from another mod, an untouched neighbour, a negative control); French label and description for every owned def; About, images and the licence copies; the Pickle steps used by the features exist |
+| Offline suite | `Tests/Test-Mod.ps1` (Windows PowerShell 5.1), after the shared checks below | what no shared check knows: no LoadFolders and no modDependencies; one sun light per quality; quality tables of 7 entries; every piece on the mod's own apparel layer; the vanilla-Disfigured patch applied to synthetic defs with the vendored `Tests/lib/PatchEngine.ps1` (vanilla shape, a stage from another mod, an untouched neighbour, a negative control); packageId, description ends and name; image sizes; the gallery copy of the Preview; nothing that must not ship in `Mod/`; no `@wip`; the Pickle companion |
+| Shared checks | `../scripts/` of the protocols repository | XML parse, duplicate defs, defs and types named by the XML (`Check-ModBasics`, `Check-DefRefs`, `Check-TypeRefs`); element-to-field mapping with the mod assembly (`Check-XmlFields -ExtraAssemblies`); French coverage (`Check-Translations`, `Check-DefInjected`); step resolution (`Check-Steps`); licence copies (`Check-ModBasics`) |
 | In-game suite | `Tests/Pickle/` | what needs a map, a pawn and a clock: the mechanism, the thoughts, the defs as the loaded game holds them |
 
 ```powershell
 dotnet build Source/NeckAccessory/NeckAccessory.csproj -c Release
 dotnet build Tests/Pickle/Source/NeckAccessory.PickleSteps.csproj -c Release
 powershell.exe -ExecutionPolicy Bypass -File Tests/Test-Mod.ps1
+# shared checks, from the protocols repository (..): Check-ModBasics, Check-Translations, Check-Steps, Check-DefRefs, Check-TypeRefs, Check-XmlFields -ExtraAssemblies Mod/Assemblies/NeckAccessory.dll
 ```
 
 ## Why the mechanism needs a running game
