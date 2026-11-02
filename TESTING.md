@@ -13,7 +13,7 @@ Pickle run takes over a machine for tens of minutes and an offline check takes a
 dotnet build Source/NeckAccessory/NeckAccessory.csproj -c Release
 dotnet build Tests/Pickle/Source/NeckAccessory.PickleSteps.csproj -c Release
 powershell.exe -ExecutionPolicy Bypass -File Tests/Test-Mod.ps1
-# shared checks, from the protocols repository (..): Check-ModBasics, Check-Translations, Check-Steps, Check-DefRefs, Check-TypeRefs, Check-XmlFields -ExtraAssemblies Mod/Assemblies/NeckAccessory.dll
+# shared checks, from the protocols repository (..): Check-ModBasics, Check-Translations, Check-Steps, Check-DefRefs, Check-TypeRefs, Check-XmlFields -ModPath Mod -ExtraAssemblies Mod/Assemblies/NeckAccessory.dll (the flag is required: without it the mod's own extension classes give 8 false "no field ... on DefModExtension" findings)
 ```
 
 ## Why the mechanism needs a running game
