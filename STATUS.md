@@ -8,7 +8,7 @@ repo:         Rimworld-Neck-Accessory
 remote:       https://github.com/vbardales/Rimworld-Neck-Accessory.git
 visibility:   public
 detached:     yes
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 settings_audit: not_applicable
 licence:      silent
 licence_at:   ATTRIBUTION.md, upstream review 2026-09-13
@@ -36,7 +36,7 @@ remaining:
   - unverified: Check-Translations WARN, ThoughtDef/Disfigured.stages.proof_of_hero.label has a French injection outside the text inventory (a stage added by a patch); the earlier audit found the path valid
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-10-14, French validated, playTests
+updated:      2026-11-02, replay green, code review closed, shootGallery
 protocols_read_sha: b6448ff1a710b27d7c79c1365e82f21949aa2ee0
 ---
 
@@ -53,7 +53,7 @@ Independent Opus read-only review: 1 high, 1 medium, 5 low, no blocking finding 
 
 ### Replay green - 2026-11-02
 
-Ticket `20261027-012303-669-87b8` (set `sans-facultatifs`, tree `5f5c3d9`, played 2026-11-02): 4/4 passed, `exitReason` passed, the rose (man, woman, innate-trait control) and lily scenarios green on the GameComponent. Evidence minified in `Tests/Pickle/Evidence/rose-lily-5f5c3d9` (with `RELEASE.md`). `code_review_sha` written (HEAD `d6e85bc`: only STATUS, docs and Preview changed since `5f5c3d9`). Move to `shootGallery[1.0.0]` waits for the session code in the title (none yet, asked of Virginie). `tested_1_7` stays absent: the 1.7 pass has its tool prerequisites (AUDIT.md, "Passe 1.7").
+Ticket `20261027-012303-669-87b8` (set `sans-facultatifs`, tree `5f5c3d9`, played 2026-11-02): 4/4 passed, `exitReason` passed, the rose (man, woman, innate-trait control) and lily scenarios green on the GameComponent. Evidence minified in `Tests/Pickle/Evidence/rose-lily-5f5c3d9` (with `RELEASE.md`). `code_review_sha` written (HEAD `d6e85bc`: only STATUS, docs and Preview changed since `5f5c3d9`). Moved to `shootGallery[1.0.0]` the same day (session code NeA given by Virginie). `tested_1_7` stays absent: the 1.7 pass has its tool prerequisites (AUDIT.md, "Passe 1.7").
 
 ### Next steps and owner rules - 2026-10-27
 
