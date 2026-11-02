@@ -16,10 +16,10 @@ upstream_mod_remotes:
   - N/A
 dependencies: none
 showcase:     partial
-tested_on:    2026-10-16
+tested_on:    2026-11-02
+code_review_sha: d6e85bc31125a087bbe4592674e9f8729aacca6d
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - "2026-10-27: unverified: replay of the rose and lily scenarios after the GameComponent fix (5f5c3d9), ticket 20261027-012303-669-87b8; code_review_sha is written once it is green"
   - "2026-10-27: defect (code review, left): GainTrait of the Gay trait has no conflict check with other sexuality traits (Bisexual, Asexual, Split Attraction orientations), and the old orientation is not restored when the necklace takes the trait back"
   - "2026-10-27: defect (code review, left): the necklace stores only the pawn id, not which Gay trait it gave: with both vanilla Gay and SplitAttraction_Gay on a pawn, FindGay may remove the wrong one"
   - "2026-10-27: defect (code review, left): a recorded pawn id is not dropped when another mod removes the trait; pawns given the trait by a build before 538da7a are not recorded and keep it; ids of dead pawns are never purged (no effect on behaviour)"
@@ -37,7 +37,7 @@ remaining:
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
 updated:      2026-10-14, French validated, playTests
-protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
+protocols_read_sha: b6448ff1a710b27d7c79c1365e82f21949aa2ee0
 ---
 
 ## Pickle passes - 2026-10-15
@@ -50,6 +50,10 @@ protocols_read_sha: 43dd90d4b7873c500347fba1be01275a48d5795b
 ### Code review - 2026-10-27 (8.m, range cfae258..61097be)
 
 Independent Opus read-only review: 1 high, 1 medium, 5 low, no blocking finding on Split Attraction absent, a pawn who already had the trait, or silent-passing steps. The high finding (the granted-pawn list lived in a MapComponent, lost with its map or missed on another map) is fixed at `5f5c3d9`: the list is now on `NeckAccessoryGameComponent`, built clean (0 warnings), DLL committed with it, offline suite 25/25. Owner chose to fix the high finding only (Virginie, in the chat); the others are in `remaining`. The new list is saved under the same key `grantedGay`, now at game level: a save made between 538da7a and 5f5c3d9 loses the records (no release carried it). `code_review_sha` waits for the replay.
+
+### Replay green - 2026-11-02
+
+Ticket `20261027-012303-669-87b8` (set `sans-facultatifs`, tree `5f5c3d9`, played 2026-11-02): 4/4 passed, `exitReason` passed, the rose (man, woman, innate-trait control) and lily scenarios green on the GameComponent. Evidence minified in `Tests/Pickle/Evidence/rose-lily-5f5c3d9` (with `RELEASE.md`). `code_review_sha` written (HEAD `d6e85bc`: only STATUS, docs and Preview changed since `5f5c3d9`). Move to `shootGallery[1.0.0]` waits for the session code in the title (none yet, asked of Virginie). `tested_1_7` stays absent: the 1.7 pass has its tool prerequisites (AUDIT.md, "Passe 1.7").
 
 ### Next steps and owner rules - 2026-10-27
 
