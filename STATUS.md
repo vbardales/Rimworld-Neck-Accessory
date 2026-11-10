@@ -20,7 +20,7 @@ tested_on:    2026-11-02
 code_review_sha: d6e85bc31125a087bbe4592674e9f8729aacca6d
 workshop:     3811292051   # private item, prepublished 0.1.0 on 2026-10-01
 remaining:
-  - "2026-11-10: ticket 20261110-150532-875-91d2 queued (gallery images 1 to 3 refiled at 0c365f5, evidence Tests/Pickle/Inbox/gallery-1-3-0c365f5; the first run f501 gave 1/3: image 1 failed on kind Labrador, image 2 on stuff=null of HDA_RoseNecklace, image 3 passed but its capture is REDO: no zoom 9, no Character tab, Nelim outside the hut door; fixes: Shogun and Yuki taken from the fixture by name, carries made of Gold or Steel). On RUN_DONE read summary.json, OPEN every capture (9.d), tune the cells, then file images 4 to 6 and the two windows (about 5 scenarios max per ticket); then 9.c order, 9.e table, subtitles (Art/Gallery-clean + Add-Subtitle), 9.f move to mountPreview"
+  - "2026-11-10: ticket 91d2 (images 1 to 3 at 0c365f5) failed 0/3, each on a non standable cell (221,238 Shogun; 152,100 Nelim walk target; 139,68 Yuki). Asked PiT for standable cells (workshop, flower-garden, hut, then clearing, infirmary, bridge); on answer fix cells in 04-gallery-captures.feature, rework scenes 1 to 5 to 5/5 (plan score 2026-11-10: tighter zoom on the piece, visible object for g on 3 and 5), then refile images 1 to 3 and only then 4 to 6 and the two windows; then 9.c order, 9.e table, subtitles (Art/Gallery-clean + Add-Subtitle), 9.f move to mountPreview"
   - "2026-11-10: Check-FeatureDefs.js false negative on HDA_* defs (NeckPlate, HeavyNeckArmor, Masochists_Choker, LilyNecklace, RoseNecklace) at submit: ticket filed with -SkipDefCheck (image 3 had already worn HDA_RoseNecklace); tell PiT if it persists"
   - "2026-11-02: STATUS.md is over 40 KB (linter WARN): move the journal sections to docs/runs/ at a quiet moment"
   - "2026-10-27: defect (code review, left): GainTrait of the Gay trait has no conflict check with other sexuality traits (Bisexual, Asexual, Split Attraction orientations), and the old orientation is not restored when the necklace takes the trait back"
@@ -39,7 +39,7 @@ remaining:
   - unverified: Check-Translations WARN, ThoughtDef/Disfigured.stages.proof_of_hero.label has a French injection outside the text inventory (a stage added by a patch); the earlier audit found the path valid
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-11-10, replay: first open 9.a (gallery), TRANSLATION_REVIEW.md regenerated, shootGallery
+updated:      2026-11-10, ticket 91d2 failed on cells, shootGallery
 protocols_read_sha: b43a82ad95796b21f8da2a174cbf36c089b521a7
 ---
 
