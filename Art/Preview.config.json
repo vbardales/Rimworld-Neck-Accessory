@@ -1,26 +1,18 @@
 {
   "panel": {
     "title": "Neck Accessory Renew (unofficial)",
-    "titleSize": 42,
     "titleParts": [
-      { "text": "Neck Accessory" }
+      { "text": "Neck Accessory" },
+      { "text": "Renew (unofficial)", "suffix": true }
     ],
-    "suffix": "Renew",
-    "tag": "(unofficial)",
-    "tagInline": true,
-    "copyLines": [
-      "Eight neck accessories.",
-      "A layer of their own."
-    ]
+    "description": "Eight neck accessories. A layer of their own."
   },
-  "backgroundFile": "Preview-source.png",
-  "echo": {
-    "file": "echo-preview.png"
-  },
+  "background": { "file": "Preview-source.png" },
   "icon": {
     "file": "ModIcon-source.png",
     "corner": "bottom-left"
   },
+  "echo": { "file": "echo-preview.png" },
   "palette": {
     "veil": "#2C1718",
     "inkPrimary": "#F5EFE6",
