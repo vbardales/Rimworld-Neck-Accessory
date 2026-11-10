@@ -26,30 +26,30 @@
 # FACING: z grows to the north and the camera looks from the south, so a pawn or a dog walking to a SMALLER z shows its front.
 #
 # SHOOTING PLAN (place; hour; subject; instant; composition; living things; decor; what the image says):
-#   1  OPENING, medium. preindustrial-workshop; 06:00 Clear, +60 ticks; Nelim carries the Sun Necklace (HDA_SunNecklace) from the
+#   1. OPENING, medium. preindustrial-workshop; 06:00 Clear, +60 ticks; Nelim carries the Sun Necklace (HDA_SunNecklace) from the
 #      benches towards the open floor, mid-stride (forced walk from (225, 240) to (225, 238), 30 ticks); instant: "just polished, about to
 #      try it on"; zoom 7 on (223, 238), the benches along the north wall behind her, torches lit; Shogun lies down facing South
 #      beside her at (221, 238); decor on the floor in front of the benches, off the line: HDA_NeckPlate (222, 242),
 #      HDA_HeavyNeckArmor (224, 241), HDA_Masochists_Choker (226, 243); says "the day starts with a necklace finished at dawn".
-#   2  MEDIUM. flower-garden; 08:00, +60 ticks; Nelim carries the Rose Necklace (HDA_RoseNecklace) and walks to Soren at (154, 100), he
+#   2. MEDIUM. flower-garden; 08:00, +60 ticks; Nelim carries the Rose Necklace (HDA_RoseNecklace) and walks to Soren at (154, 100), he
 #      waits in place facing West, instant: "just before he takes it"; zoom 6 on (153, 101); HDA_LilyNecklace on the ground in the foreground
 #      at (151, 98) off-centre; the garden's own lilies and roses, plus Plant_Daylily fully grown at (150, 99) and (156, 98); says "a
 #      necklace for each of them, handed over among the flowers".
-#   3  MEDIUM, tab. hut; 10:00, 1100 ticks of ultrafast first; Soren wears the Rose Necklace after the affinity settled (hediff
+#   3. MEDIUM, tab. hut; 10:00, 1100 ticks of ultrafast first; Soren wears the Rose Necklace after the affinity settled (hediff
 #      InvitationForForbiddance 0.97, then 1100 ticks: the trait Gay is granted); Soren at (135, 70) selected, the Character tab open;
 #      Nelim carries a meal (MealSimple) in from the south door (141, 66) to (142, 69), mid-step, 20 ticks; instant: "just before she sets
 #      the meal down"; zoom 9 on a cell shifted 4 cells west of the pawns so they sit in the right of the frame (the inspect panel is at
 #      the left, GALERIE.md); Yuki kept asleep under the table at (139, 68) seen from the front; TorchLamp lit at (143, 74); the hut's own
 #      table and braseros; says "the rose necklace has done its quiet work".
-#   4  WIDE. bare-clearing; 12:00, +40 ticks; Soren carries the Heavy Neck Armor (HDA_HeavyNeckArmor) out of the clearing walking
+#   4. WIDE. bare-clearing; 12:00, +40 ticks; Soren carries the Heavy Neck Armor (HDA_HeavyNeckArmor) out of the clearing walking
 #      South from (196, 156) to (196, 149), Nelim two cells behind him from (195, 158), Shogun and Yuki follow Nelim, all four seen from
 #      the front; instant: "just before he puts it on"; zoom 6 on (195, 152); the clearing's flower border, Plant_Daylily fully grown at
 #      (188, 155) and (203, 148), PlantPot_Bonsai at (190, 148); says "he carries the heavy armour out to try it".
-#   5  CLOSE, tab. infirmary-pawns; 15:00, 6100 ticks of ultrafast first; Soren stands at (201, 51) with stiff shoulders (StiffShoulder 0.5
+#   5. CLOSE, tab. infirmary-pawns; 15:00, 6100 ticks of ultrafast first; Soren stands at (201, 51) with stiff shoulders (StiffShoulder 0.5
 #      given), selected, the Health tab open; Nelim walks to him carrying the Swindler's Necklace (HDA_SwindlerNecklace) from (205, 51)
 #      to (203, 51), 25 ticks; instant: "just before relief"; zoom 6 on a cell shifted 3 cells west of Soren; the room's beds and vital
 #      monitors behind; Yuki kept asleep at the door (202, 48); says "the swindler's necklace eases what the armour stiffened".
-#   6  CLOSING, wide. river-bridge; 22:00 Clear, 60 ticks then 20; Nelim in the Sun Necklace (Legendary), the light pool on her cell,
+#   6. CLOSING, wide. river-bridge; 22:00 Clear, 60 ticks then 20; Nelim in the Sun Necklace (Legendary), the light pool on her cell,
 #      caught mid-stride eastwards across the wooden deck (x 127 to 141, z 123 to 127) from (131, 125) to (137, 125); instant: "walking
 #      home, day done"; zoom 7 on (134, 125); Shogun sits ahead at (136, 124) facing South, Yuki follows Nelim; PlantPot_Bonsai at
 #      (128, 128) and (140, 122) on the banks, unlit; says "a small sun around her neck, walking home".
@@ -98,7 +98,7 @@ Feature: the Workshop gallery images
     When Nelim's Pickle Tools: I place the decor "HDA_NeckPlate" at (222, 242)
     And Nelim's Pickle Tools: I place the decor "HDA_HeavyNeckArmor" at (224, 241)
     And Nelim's Pickle Tools: I place the decor "HDA_Masochists_Choker" at (226, 243)
-    And Nelim's Pickle Tools: a male adult animal of kind "Labrador" named "Shogun" is spawned at (221, 238)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (221, 238)
     And Nelim's Pickle Tools: the animal "Shogun" lies at (221, 238) facing South
     And Nelim's Pickle Tools: "Nelim" stands at (225, 240) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
@@ -106,7 +106,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_SunNecklace"
+    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_SunNecklace" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (225, 238)
     And Nelim's Pickle Tools: I advance the paused game by exactly 30 ticks
     And Nelim's Pickle Tools: I frame the cell (223, 238) at zoom 7
@@ -133,7 +133,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSmile"
-    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_RoseNecklace"
+    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_RoseNecklace" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (152, 100)
     And Nelim's Pickle Tools: "Soren" waits in place
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
@@ -161,7 +161,7 @@ Feature: the Workshop gallery images
     Given game speed is paused
     When Nelim's Pickle Tools: I place the decor "TorchLamp" at (143, 74)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (143, 74) is lit
-    And Nelim's Pickle Tools: a female adult animal of kind "Husky" named "Yuki" is spawned at (139, 68)
+    And Nelim's Pickle Tools: the animal "Yuki" stands at (139, 68)
     And Nelim's Pickle Tools: the animal "Yuki" is kept asleep
     And Nelim's Pickle Tools: "Soren" stands at (135, 70) facing East
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSmile"
@@ -191,8 +191,8 @@ Feature: the Workshop gallery images
     When Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (188, 155) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (203, 148) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (190, 148)
-    And Nelim's Pickle Tools: a male adult animal of kind "Labrador" named "Shogun" is spawned at (193, 156)
-    And Nelim's Pickle Tools: a female adult animal of kind "Husky" named "Yuki" is spawned at (197, 157)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (193, 156)
+    And Nelim's Pickle Tools: the animal "Yuki" stands at (197, 157)
     And Nelim's Pickle Tools: "Soren" stands at (196, 156) facing South
     And Nelim's Pickle Tools: "Nelim" stands at (195, 158) facing South
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
@@ -201,7 +201,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSmile"
-    And Nelim's Pickle Tools: "Soren" carries the item "HDA_HeavyNeckArmor"
+    And Nelim's Pickle Tools: "Soren" carries the item "HDA_HeavyNeckArmor" made of "Steel"
     And Nelim's Pickle Tools: "Soren" is forced to walk to (196, 149)
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (195, 151)
     And Nelim's Pickle Tools: "Shogun" follows "Nelim"
@@ -228,7 +228,7 @@ Feature: the Workshop gallery images
     When Neck Accessory: I let 6100 ticks pass
     Then Neck Accessory: the hediff "StiffShoulder" of "Soren" has a severity of at most 0.49
     Given game speed is paused
-    When Nelim's Pickle Tools: a female adult animal of kind "Husky" named "Yuki" is spawned at (202, 48)
+    When Nelim's Pickle Tools: the animal "Yuki" stands at (202, 48)
     And Nelim's Pickle Tools: the animal "Yuki" is kept asleep
     And Nelim's Pickle Tools: "Soren" stands at (201, 51) facing South
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSmile"
@@ -238,7 +238,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
-    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_SwindlerNecklace"
+    And Nelim's Pickle Tools: "Nelim" carries the item "HDA_SwindlerNecklace" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (203, 51)
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
     And Nelim's Pickle Tools: I select the thing of def "Human" at (201, 51)
@@ -263,9 +263,9 @@ Feature: the Workshop gallery images
     Given game speed is paused
     When Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (128, 128)
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (140, 122)
-    And Nelim's Pickle Tools: a male adult animal of kind "Labrador" named "Shogun" is spawned at (136, 124)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (136, 124)
     And Nelim's Pickle Tools: the animal "Shogun" faces South
-    And Nelim's Pickle Tools: a female adult animal of kind "Husky" named "Yuki" is spawned at (129, 124)
+    And Nelim's Pickle Tools: the animal "Yuki" stands at (129, 124)
     And Nelim's Pickle Tools: "Nelim" stands at (131, 125) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
