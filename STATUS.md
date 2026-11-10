@@ -39,7 +39,7 @@ remaining:
   - unverified: Check-Translations WARN, ThoughtDef/Disfigured.stages.proof_of_hero.label has a French injection outside the text inventory (a stage added by a patch); the earlier audit found the path valid
   - unverified: social preview not uploaded to GitHub after the Preview was re-rendered on 2026-10-13 (social_preview_sha256 absent; web step, belongs to mountPreview)
 session:      maj:        2026-09-12, releve automatique
-updated:      2026-11-10, gallery 1 to 3 refiled, shootGallery
+updated:      2026-11-10, replay: first open 9.a (gallery), TRANSLATION_REVIEW.md regenerated, shootGallery
 protocols_read_sha: b43a82ad95796b21f8da2a174cbf36c089b521a7
 ---
 
