@@ -75,6 +75,37 @@ Interface windows, no subtitle, not scored: W1 info card of `HDA_Heros_scarf` (S
 
 Estimates (points only): 1 to 5 each 4.5 (j weak: a one-cell item is about 10 px at 268 px), 6 is 5. Weak points and risks: cells of the items and pawns not fixed (read on the empty photographs of each place before the ticket); the Soren and Nelim looks to check in `LOOKS-VALIDATION.md`; Soren's Gay trait on the Character tab of scene 3 confirmed by Virginie in the chat on 2026-11-02 ("ok"); sun-light pool brightness at 22:00 unplayed. Written 2026-11-02: `Tests/Pickle/Mod/Pickle/Features/04-gallery-captures.feature` (header = this shotlist, 6 scenes and 2 windows, `Check-Steps` resolves every line), pass map `Tests/Pickle/wsl-deps.gallery.map` with the seeds in `Tests/Pickle/config/gallery/`, subtitles in `PUBLICATION.md`. Cells are first guesses from the empty photographs, tuned by the first capture. Not filed: a ticket over about 5 scenarios is killed (exit 137), so the series goes in two or three tickets (`-Filter` on the image names).
 
+### NSB - sync 2026-11-10
+
+Places read: 2026-11-10 (VALIDE.md places table and git log since 2026-11-02; SANCTUAIRE-LIEUX.md only through its diff, 1677380: no place of this mod touched) Tribe read: 2026-11-10 (VALIDE.md colonist and animal sections, APPARENCES-CANON.md lines of Nelim, Soren, Shogun, Yuki; profiles not reopened) Steps read: 2026-11-10 (PickleTools git log since 2026-11-02: new steps are the field family, stockpile, sky overlays, cardinal-cell decor, graphic scale; none serves a shot of this mod).
+
+Rules of the owner (2026-11-05, 2026-11-06, 2026-11-07), as applied: everything in NSB is free (places, colonists, domestic animals); outside NSB needs her express validation (colonist, domestic animal), none is used; a colonist property change needs her validation (one: Soren's Gay trait on the Character tab of scene 3, "ok" in the chat 2026-11-02, quoted in the shotlist section); every outfit is free; every animal the mod includes is in the gallery (the mod ships no animal: none to show).
+
+Changed in NSB since 2026-11-02: places validated or refused in lots 5l and 5m (workshops, right-bank, left-bank, gravel-yard), fixture `Nelims-tribe-decor-mods-z3.rws` copied to `Mod/Pickle/Fixtures` (2026-11-09), Quill eyes in the roster. Nothing the gallery uses moved: updated none, files untouched. Left alone: Soren's daily outfit in NSB was redone on 2026-11-05 (`LisaWork_ApparelCollaredShirt` and vest), while this gallery keeps the blue-grey `Apparel_CollarShirt` of the shotlist: an outfit is free, the shotlist says which and why.
+
+| Place | Shots | Changes for the gallery | Last read |
+| --- | --- | --- | --- |
+| `preindustrial-workshop` | 1 | none (validated 2026-11-07, lot 4a) | 2026-11-10 |
+| `flower-garden` | 2 | none (revalidated 2026-11-07) | 2026-11-10 |
+| `hut` (alias `tea-room`) | 3 | none (validated 2026-11-06); TorchLamp placed by the scene | 2026-11-10 |
+| `bare-clearing` | 4 | none (validated 2026-11-07) | 2026-11-10 |
+| `infirmary-pawns` | 5 | none (validated 2026-11-05) | 2026-11-10 |
+| `river-bridge` | 6 | none (validated 2026-11-06; stepping stones removed lot 5m, outside the frame) | 2026-11-10 |
+
+| Colonist | Shots | Outfit per shot | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| Nelim | 1 to 6 | teal `Apparel_BasicShirt` dyed (30, 100, 110) over the fixture trousers and corset, all day (continuity of one working day) | 2026-11-10 (VALIDE.md, APPARENCES-CANON.md) | none |
+| Soren | 2 to 5 | blue-grey `Apparel_CollarShirt` (110, 130, 150), brown trousers, `Roo_HD_Hair_Tidy`, `Eyes_SkyBlue`; the necklaces for men are worn by him | 2026-11-10 (VALIDE.md, APPARENCES-CANON.md) | Gay trait granted by the mod's own mechanism, scene 3 Character tab: Virginie, chat, 2026-11-02, "ok" |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+| --- | --- | --- | --- | --- |
+| Shogun (labrador, linked to Nelim) | 1, 4, 6 | none | 2026-11-10 (VALIDE.md, APPARENCES-CANON.md) | none |
+| Yuki (husky, linked to Soren) | 3, 4, 5, 6 | none | 2026-11-10 (VALIDE.md, APPARENCES-CANON.md) | none |
+
+| Animal included by the mod | Shots |
+| --- | --- |
+| none (the mod adds eight neck accessories, no animal) | n/a |
+
 ### Next steps and owner rules - 2026-10-27
 
 When ticket 20261027-012303-669-87b8 is green: write `code_review_sha` (HEAD, bare 40-character sha; only STATUS, docs and Preview changed since `5f5c3d9`), then move to `shootGallery[1.0.0]` (8.n: `Check-Status`, `Mark-ProtocolsRead`, STATUS, commit, push, rename, `STAGE` message to the TM). Virginie approved the move in the chat (2026-10-27) on condition of a clean review; she chose to fix only the high finding. At `shootGallery`: run `write-shotlist` first, then `review-gallery`. Owner rules for the gallery (2026-10-27): any missing step is asked of NPT, and on a refusal Virginie arbitrates; only the colonists of NSB (SanctuaryBacklot) are allowed, any other colonist needs her express and reasoned authorization.
