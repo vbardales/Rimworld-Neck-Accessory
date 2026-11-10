@@ -106,6 +106,12 @@ Changed in NSB since 2026-11-02: places validated or refused in lots 5l and 5m (
 | --- | --- |
 | none (the mod adds eight neck accessories, no animal) | n/a |
 
+### Plan score - 2026-11-10 (score-gallery, rules of 2026-11-07, plan only, one capture opened)
+
+Plan confidence per scene: 1 = 4.5, 2 = 4.5, 3 = 4.0, 4 = 4.5, 5 = 4.0, 6 = 5.0 (mean 4.42). k (series) ok: one day, wide (4, 6), medium (1, 2, 3), close (5), opening 1, closing 6, hours move on. Weak points: j on 1, 2, 3, 4, 5 (a carried or floor necklace is about 10 px at 268 px; the worn piece draws nothing; the Character and Health tabs show a trait and a hediff, not the mod); g on 3 and 5 (the sentence "has done its quiet work" and "eases what the armour stiffened" is true only through the header). Gate "no ticket below 5" NOT met for scenes 1 to 5: ticket 91d2 (images 1 to 3) was filed under the old 4.0 floor; no ticket for images 4 to 6 until the plan is reworked: tighter crop (zoom 9 or more on the carried piece, about 30 px at 268 px) and, for 3 and 5, a visible object that says the sentence (the necklace carried in frame, the pawn's pose). Also: the header says Nelim wears charcoal trousers `Apparel_Pants`, the table above says the fixture trousers and corset: align at the rework.
+
+Capture opened: image 3 of run f501 (deleted since): image 3.5, adequacy 2.5 (zoom 9 and Character tab absent, Nelim outside the door instead of carrying the meal in), understanding 2, decoration 3.5: REDO. Images 1 and 2 had no capture (scenario failed). Not verified: the 268 px reduction (no capture left), scenes 4 to 6 on image.
+
 ### Next steps and owner rules - 2026-10-27
 
 When ticket 20261027-012303-669-87b8 is green: write `code_review_sha` (HEAD, bare 40-character sha; only STATUS, docs and Preview changed since `5f5c3d9`), then move to `shootGallery[1.0.0]` (8.n: `Check-Status`, `Mark-ProtocolsRead`, STATUS, commit, push, rename, `STAGE` message to the TM). Virginie approved the move in the chat (2026-10-27) on condition of a clean review; she chose to fix only the high finding. At `shootGallery`: run `write-shotlist` first, then `review-gallery`. Owner rules for the gallery (2026-10-27): any missing step is asked of NPT, and on a refusal Virginie arbitrates; only the colonists of NSB (SanctuaryBacklot) are allowed, any other colonist needs her express and reasoned authorization.
