@@ -178,6 +178,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I open the "Character" inspect tab
     And Nelim's Pickle Tools: I frame the cell (136, 70) at zoom 5
     And Nelim's Pickle Tools: developer mode is turned off for the capture
+    And Nelim's Pickle Tools: the main bar, the speed controls and the mouse-over readout are hidden
     And I take a screenshot "image 3, the rose necklace has done its quiet work"
     And Nelim's Pickle Tools: the decor is removed
     Then no errors were logged
@@ -245,6 +246,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I open the "Health" inspect tab
     And Nelim's Pickle Tools: I frame the cell (199, 52) at zoom 6
     And Nelim's Pickle Tools: developer mode is turned off for the capture
+    And Nelim's Pickle Tools: the main bar, the speed controls and the mouse-over readout are hidden
     And I take a screenshot "image 5, the swindler's necklace eases what the armour stiffened"
     Then no errors were logged
 
