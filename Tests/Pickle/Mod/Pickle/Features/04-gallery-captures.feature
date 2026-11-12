@@ -109,7 +109,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" carries the item "HDA_SunNecklace" made of "Gold"
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (225, 238)
     And Nelim's Pickle Tools: I advance the paused game by exactly 30 ticks
-    And Nelim's Pickle Tools: I frame the cell (223, 238) at zoom 7
+    And Nelim's Pickle Tools: I frame the cell (224, 240) at zoom 4.5
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "image 1, the day starts with a necklace finished at dawn"
     And Nelim's Pickle Tools: the decor is removed
@@ -137,7 +137,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 100)
     And Nelim's Pickle Tools: "Soren" waits in place
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
-    And Nelim's Pickle Tools: I frame the cell (153, 101) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (152, 100) at zoom 4.5
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "image 2, a necklace for each of them"
     And Nelim's Pickle Tools: the decor is removed
@@ -176,8 +176,8 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I advance the paused game by exactly 20 ticks
     And Nelim's Pickle Tools: I select the thing of def "Human" at (135, 70)
     And Nelim's Pickle Tools: I open the "Character" inspect tab
-    And Nelim's Pickle Tools: I frame the cell (136, 71) at zoom 9
-    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: I frame the cell (136, 70) at zoom 5
+    And Nelim's Pickle Tools: screenshot mode is enabled around the open windows
     And I take a screenshot "image 3, the rose necklace has done its quiet work"
     And Nelim's Pickle Tools: the decor is removed
     Then no errors were logged
@@ -244,7 +244,7 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: I select the thing of def "Human" at (201, 51)
     And Nelim's Pickle Tools: I open the "Health" inspect tab
     And Nelim's Pickle Tools: I frame the cell (199, 52) at zoom 6
-    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: screenshot mode is enabled around the open windows
     And I take a screenshot "image 5, the swindler's necklace eases what the armour stiffened"
     Then no errors were logged
 
