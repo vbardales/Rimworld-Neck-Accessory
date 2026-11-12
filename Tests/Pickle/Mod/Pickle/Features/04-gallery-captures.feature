@@ -31,7 +31,7 @@
 #      try it on"; zoom 7 on (223, 238), the benches along the north wall behind her, torches lit; Shogun lies down facing South
 #      beside her at (222, 238); decor on the floor in front of the benches, off the line: HDA_NeckPlate (222, 242),
 #      HDA_HeavyNeckArmor (224, 241), HDA_Masochists_Choker (226, 243); says "the day starts with a necklace finished at dawn".
-#   2. MEDIUM. flower-garden; 08:00, +60 ticks; Nelim carries the Rose Necklace (HDA_RoseNecklace) and walks to Soren at (154, 100), he
+#   2. MEDIUM. flower-garden; 08:00, +60 ticks; Nelim carries the Rose Necklace (HDA_RoseNecklace) and walks to Soren at (157, 100), he
 #      waits in place facing West, instant: "just before he takes it"; zoom 6 on (153, 101); HDA_LilyNecklace on the ground in the foreground
 #      at (151, 98) off-centre; the garden's own lilies and roses, plus Plant_Daylily fully grown at (150, 99) and (156, 98); says "a
 #      necklace for each of them, handed over among the flowers".
@@ -125,8 +125,8 @@ Feature: the Workshop gallery images
     When Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (150, 99) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (156, 98) fully grown
     And Nelim's Pickle Tools: I place the decor "HDA_LilyNecklace" at (151, 98)
-    And Nelim's Pickle Tools: "Soren" stands at (154, 100) facing West
-    And Nelim's Pickle Tools: "Nelim" stands at (150, 101) facing East
+    And Nelim's Pickle Tools: "Soren" stands at (157, 100) facing West
+    And Nelim's Pickle Tools: "Nelim" stands at (154, 101) facing East
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
@@ -134,10 +134,10 @@ Feature: the Workshop gallery images
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Soren" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" carries the item "HDA_RoseNecklace" made of "Gold"
-    And Nelim's Pickle Tools: "Nelim" is forced to walk to (153, 100)
+    And Nelim's Pickle Tools: "Nelim" is forced to walk to (156, 101)
     And Nelim's Pickle Tools: "Soren" waits in place
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
-    And Nelim's Pickle Tools: I frame the cell (152, 100) at zoom 4.5
+    And Nelim's Pickle Tools: I frame the cell (154, 100) at zoom 4.5
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And I take a screenshot "image 2, a necklace for each of them"
     And Nelim's Pickle Tools: the decor is removed
