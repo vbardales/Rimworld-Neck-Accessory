@@ -136,6 +136,10 @@ Owner decisions in the chat. The necklaces now take back the Gay trait only when
 
 Review by an independent read-only agent of Source/, Mod/Defs, Mod/Patches and the language folders at bfab278 (0 blocking, 4 risks, 2 questions). Fixed at d0cd3f7: the hero aura now reaches only the wearer's faction (it hit neutral factions, guests and animals), and the Japanese override of the vanilla Disfigured stage label was removed. The other findings are in remaining. The two initial Pickle tickets were filed at bfab278 and carry no sha: they stage the tree as it stands when played, so they test d0cd3f7 (or later), not bfab278. code_review_sha is not written yet (due at shootGallery, after the Pickle passes).
 
+## Translation audit - ChatGPT review validated, 2026-11-12
+
+Virginie validated the review in the chat on 2026-11-12 ("je valide la review"). Pass 1 (revision e435215): 5 applied at `b2831cf` (French hero stage and `nice_guy-0`, three missing Japanese descriptions), refusals in `Docs/review-refusals.md`. Pass 2 on the frozen text: no correction. `translation_fr` stays `complete`.
+
 ## Translation audit - French review, 2026-10-14
 
 Reviewer: Virginie (confirmed in the chat). Revision reviewed: `4796eae` (the French files did not change between it and the audit of 2026-10-13). Corrections requested, all applied at `018b2cf`: "héros" replaced by neutral wording in five texts (HDA_Hediff_Hero_inspirationt label, the stage "Tant qu'il reste de l'héroïsme, je ne me vois pas perdre !", HDA_Heros_scarf label and description, HeroIsOnlyOne label). The description of the inspiration hediff also said "l'écharpe du héros": it became "l'écharpe héroïque" for consistency (a sixth text she did not list). Rose and lily necklaces confirmed correct (fixed sex, not an agreement). **Validated by Virginie in the chat on 2026-10-14** ("Je valide", revision `018b2cf`): the five reworded texts and the fixed-sex rose and lily wording; `translation_fr` is `complete`. The sixth text (inspiration description) was covered by her validation of the regenerated file. English defects reported, left uncorrected (see `remaining`).
