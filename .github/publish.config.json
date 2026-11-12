@@ -1,0 +1,18 @@
+{
+  "templateStamp": "b55ad31e7d6c",
+  "workshopId": "3811292051",
+  "packageId": "nelim.neckaccessory",
+  "releaseTitle": "Neck Accessory Renew (unofficial) {version}",
+  "requirePaths": [
+    "Assemblies/NeckAccessory.dll",
+    "Defs",
+    "Patches",
+    "Languages"
+  ],
+  "forbidPaths": [],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery",
+  "build": {
+    "project": "Source/NeckAccessory/NeckAccessory.csproj"
+  }
+}
