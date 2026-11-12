@@ -6,6 +6,7 @@
 #
 # Added for this suite: the Backlot itself (the fixture Nelims-tribe and the place steps, prefix "Nelim's Sanctuary:"; it must NOT also
 # be staged by ScreenshotStudio, a duplicate fixture fails Pickle) and ScreenshotMode (the two info-card windows of 04-gallery-captures).
+brrainz.harmony 2009463077
 nelim.sanctuarybacklot path:SanctuaryBacklot/Mod
 nelim.pickletools.screenshotmode path:PickleTools/ScreenshotMode/Mod
 # ---- the Backlot's map, as copied ----
