@@ -3,7 +3,7 @@
 
   <!-- Stage 0 = observer of the same sex (+40), stage 1 = of the other (+5).
        Japanese distinguishes the two for the rose; the lily uses one word for both. -->
-  <RoseNecklace.stages.nice_guy-0.label>un homme, un vrai</RoseNecklace.stages.nice_guy-0.label>
+  <RoseNecklace.stages.nice_guy-0.label>un homme bien</RoseNecklace.stages.nice_guy-0.label>
   <RoseNecklace.stages.nice_guy-1.label>un homme bien</RoseNecklace.stages.nice_guy-1.label>
   <LilyNecklace.stages.nice_lady-0.label>une femme bien</LilyNecklace.stages.nice_lady-0.label>
   <LilyNecklace.stages.nice_lady-1.label>une femme bien</LilyNecklace.stages.nice_lady-1.label>
